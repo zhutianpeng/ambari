@@ -2242,197 +2242,199 @@ Em.I18n.translations = {
   'services.service.stop.confirmMsg' : '你正要停止 {0}',
   'services.service.stop.confirmButton': '确认停止',
   'services.service.start.confirmButton' : '确认启动',
-  'services.service.stop.warningMsg.turnOnMM': 'This will generate alerts as the service is stopped. To suppress alerts, turn on Maintenance Mode for {0} prior to stopping.',
-  'services.service.stop.warningMsg.dependent.services': 'Stopping {0} may impair the functioning of its dependent service(s): {1}.',
-  'services.service.restartAll.confirmButton': 'Confirm Restart All',
-  'services.service.restartAll.confirmMsg': 'You are about to restart {0}',
-  'services.service.restartAll.warningMsg.turnOnMM': 'This will trigger alerts as the service is restarted. To suppress alerts, turn on Maintenance Mode for {0} prior to running restart all',
-  'services.service.stop.HDFS.warningMsg.checkPointNA': 'Could not determine the age of the last HDFS checkpoint. Please ensure that you have a recent checkpoint. Otherwise, the NameNode(s) can take a very long time to start up.',
+  'services.service.stop.warningMsg.turnOnMM': '这将在服务停止时生成警报。若要禁止警报，请在停止之前打开{0}的维护模式。',
+  'services.service.stop.warningMsg.dependent.services': '停止{0}可能损害其从属服务的功能：{1}。',
+  'services.service.restartAll.confirmButton': '确认要全部重启',
+  'services.service.restartAll.confirmMsg': '你正要重启服务：{0}',
+  'services.service.restartAll.warningMsg.turnOnMM': '这将在重新启动服务时触发警报。若要抑制警报，请在运行重新启动所有警报之前打开{0}的维护模式',
+  'services.service.stop.HDFS.warningMsg.checkPointNA': '无法确定上一个HDFS检查点的年龄。请确保您最近有一个检查站。否则，NameNode可能需要很长时间才能启动。',
+
   'services.service.stop.HDFS.warningMsg.checkPointTooOld.instructions':
     '<br><ol>' +
-    '<li>Login to the NameNode host <b>{0}</b>.</li>' +
-    '<li>Put the NameNode in Safe Mode (read-only mode):' +
+    '<li>登录到NameNode主机 <b>{0}</b>.</li>' +
+    '<li>将命名节点置于安全模式 (只读模式):' +
     '<div class="code-snippet">sudo su {1} -l -c \'hdfs dfsadmin -safemode enter\'</div></li>' +
-    '<li>Once in Safe Mode, create a Checkpoint:' +
+    '<li>一旦进入安全模式，创建一个检查点：' +
     '<div class="code-snippet">sudo su {1} -l -c \'hdfs dfsadmin -saveNamespace\'</div></li>' +
     '</ol>',
-  'services.service.stop.HDFS.warningMsg.checkPointTooOld': 'The last HDFS checkpoint is older than {0} hours. Make sure that you have taken a checkpoint before proceeding. Otherwise, the NameNode(s) can take a very long time to start up.',
-  'services.service.config_groups_popup.header':'Manage {0} Configuration Groups',
-  'services.service.config_groups_popup.notice':'You can apply different sets of {{serviceName}} configurations to groups of hosts by managing {{serviceName}} Configuration Groups and their host membership.  Hosts belonging to a {{serviceName}} Configuration Group have the same set of configurations for {{serviceName}}. Each host belongs to one {{serviceName}} Configuration Group.',
-  'services.service.config_groups_popup.rename':'Rename',
-  'services.service.config_groups_popup.duplicate':'Duplicate',
-  'services.service.config_groups_popup.group_name_lable':'Name',
-  'services.service.config_groups_popup.group_desc_lable':'Description',
-  'services.service.config_groups_popup.properties':'Properties',
-  'services.service.config_groups_popup.addButton':'Create new Configuration Group',
-  'services.service.config_groups_popup.removeButton':'Delete Configuration Group',
-  'services.service.config_groups_popup.renameButton':'Rename Configuration Group',
-  'services.service.config_groups_popup.addHost':'Add hosts to selected Configuration Group',
-  'services.service.config_groups_popup.addHostDisabled':'There are no available hosts to add.',
-  'services.service.config_groups_popup.removeHost':'Remove hosts from selected Configuration Group',
-  'services.service.config_groups_popup.duplicateButton':'Duplicate Configuration Group',
-  'services.service.config_groups.add_config_group_popup.header':'Create New Configuration Group',
-  'services.service.config_groups.duplicate_config_group_popup.header':'Duplicate Configuration Group',
-  'services.service.config_groups.rename_config_group_popup.header':'Rename Configuration Group',
-  'services.service.config_groups.switchGroupTextFull':'Switch to \'{0}\' host config group',
-  'services.service.config_groups.switchGroupTextShort':'Switch to \'{0}\'',
-  'services.reassign.closePopup':'Move {0} wizard is in progress. You must allow the wizard to complete for Ambari to be in usable state. If you choose to quit, you must follow manual instructions to complete or revert move {0} wizard as documented in the Ambari User Guide. Are you sure you want to exit the wizard?',
-  'services.reassign.error.fewHosts':'You must have at least 2 hosts in your cluster to run Move Wizard.',
+  'services.service.stop.HDFS.warningMsg.checkPointTooOld': '最后一个HDFS检查点比{0}小时老。在继续之前，请确保您已经采取了检查点。否则，NameNode可能需要很长时间才能启动。',
 
-  'services.reassign.step1.header':'Get Started',
-  'services.reassign.step1.message1': 'This wizard will walk you through moving {0}.<br/>',
-  'services.reassign.step1.message2': 'The process to reassign {0} involves a combination of <b>automated steps</b> (that will be handled by the wizard) and ' +
-      '<b>manual steps</b> (that you must perform in sequence as instructed by the wizard).<br/><br/>',
-  'services.reassign.step1.message3': '<br/><p class="restart-services-alert">Following services will be restarted as part of the wizard: <b>{0}</b>. You should plan a cluster maintenance window and prepare ' +
-    'for cluster downtime when moving {1}.</p>',
+  'services.service.config_groups_popup.header':'管理{0}配置组',
+  'services.service.config_groups_popup.notice':'可以通过管理{{serviceName}}配置组及其主机成员资格来向主机组应用不同的{{serviceName}}配置集。属于{{serviceName}}配置组的主机具有与{{serviceName}}相同的一组配置。每个主机都属于一个{{serviceName}}配置组。',
+  'services.service.config_groups_popup.rename':'重命名',
+  'services.service.config_groups_popup.duplicate':'复制',
+  'services.service.config_groups_popup.group_name_lable':'名字',
+  'services.service.config_groups_popup.group_desc_lable':'描述',
+  'services.service.config_groups_popup.properties':'性质',
+  'services.service.config_groups_popup.addButton':'创建新的配置组',
+  'services.service.config_groups_popup.removeButton':'删除配置组',
+  'services.service.config_groups_popup.renameButton':'重命名配置组',
+  'services.service.config_groups_popup.addHost':'将主机添加到选定的配置组',
+  'services.service.config_groups_popup.addHostDisabled':'没有可用的主机可以添加',
+  'services.service.config_groups_popup.removeHost':'从选定的配置组中删除主机',
+  'services.service.config_groups_popup.duplicateButton':'重复配置组',
+  'services.service.config_groups.add_config_group_popup.header':'创建新配置组',
+  'services.service.config_groups.duplicate_config_group_popup.header':'重复配置组',
+  'services.service.config_groups.rename_config_group_popup.header':'重命名配置组',
+  'services.service.config_groups.switchGroupTextFull':'切换为 \'{0}\' 主机配置组',
+  'services.service.config_groups.switchGroupTextShort':'切换至 \'{0}\'',
+  'services.reassign.closePopup':'移动{0}向导正在进行中。必须允许向导完成才能使Ambari处于可用状态。如果选择退出，必须按照手动说明完成或恢复移动{0}向导，如Ambari用户指南中所述。您确定要退出向导吗？',
+  'services.reassign.error.fewHosts':'必须在集群中至少有2个主机才能运行移动向导。',
 
-  'services.reassign.step2.header':'Assign Master',
+  'services.reassign.step1.header':'开始吧！',
+  'services.reassign.step1.message1': '这个向导将带领您完成操作 {0}.<br/>',
+  'services.reassign.step1.message2': '重新分配{0}的过程包括<b>自动步骤</b>（将由向导处理）和 ' +
+      '<b>手动步骤</b>（必须按照向导的指示顺序执行）。<br/><br/>',
+  'services.reassign.step1.message3': '<br/><p class="restart-services-alert">以下服务将作为向导的一部分重新启动：<b>{0}</b>。您应该计划一个集群维护窗口并做好准备 ' +
+    '在移动时用于集群停机 {1}.</p>',
+
+  'services.reassign.step2.header':'分配 Master',
   'services.reassign.step2.currentHost':'Current:',
-  'services.reassign.step2.body':'Assign {0} to new host.',
-  'services.reassign.step2.body.namenodeHA':'Move {0} to new host. You can move only one master component at a time.',
-  'services.reassign.step3.header':'Review',
-  'services.reassign.step3.body':'<b>Confirm your host selections.</b>',
-  'services.reassign.step3.targetHost':'Target Host:',
-  'services.reassign.step3.sourceHost':'Source Host:',
-  'services.reassign.step3.component':'Component name:',
+  'services.reassign.step2.body':'把 {0} 分配给新节点。',
+  'services.reassign.step2.body.namenodeHA':'将{0}移动到新主机。一次只能移动一个主组件。',
+  'services.reassign.step3.header':'回顾',
+  'services.reassign.step3.body':'<b>确认您的主机选择.</b>',
+  'services.reassign.step3.targetHost':'目标 Host:',
+  'services.reassign.step3.sourceHost':'源 Host:',
+  'services.reassign.step3.component':'组件名:',
   'services.reassign.step3.configs':'<div class="alert alert-info">' +
-    '<p><b>Review Configuration Changes.</b></p>The Wizard will make the following configuration changes.</div>',
-  'services.reassign.step4.header':'Configure Component',
+    '<p><b>检查配置更改.</b></p>向导将做出以下配置更改。</div>',
+  'services.reassign.step4.header':'配置组件',
 
-  'services.reassign.step4.tasks.stopRequiredServices.title':'Stop Required Services',
-  'services.reassign.step4.tasks.createHostComponents.title':'Create {0}',
-  'services.reassign.step4.tasks.putHostComponentsInMaintenanceMode.title':'Disable {0}',
-  'services.reassign.step4.tasks.reconfigure.title':'Reconfigure {0}',
-  'services.reassign.step4.tasks.save.configuration.note':'This configuration is created by Move {0} wizard',
-  'services.reassign.step4.tasks.installHostComponents.title':'Install {0}',
-  'services.reassign.step4.tasks.startZooKeeperServers.title':'Start ZooKeeper Servers',
-  'services.reassign.step4.tasks.startNameNode.title':'Start NameNode',
-  'services.reassign.step4.tasks.stopHostComponentsInMaintenanceMode.title':'Stop {0}',
-  'services.reassign.step4.tasks.deleteHostComponents.title':'Delete disabled {0}',
-  'services.reassign.step4.tasks.startRequiredServices.title':'Start Required Services',
-  'services.reassign.step4.tasks.cleanMySqlServer.title':'Clean MYSQL Server',
-  'services.reassign.step4.tasks.testHiveMysqlConnection.title':'Test MYSQL Connection',
-  'services.reassign.step4.tasks.configureMySqlServer.title':'Configure MYSQL Server',
-  'services.reassign.step4.tasks.startMySqlServer.title':'Start MYSQL Server',
-  'services.reassign.step4.tasks.restartMySqlServer.title':'Restart MYSQL Server',
-  'services.reassign.step4.tasks.startServices.title':'Start Services',
-  'services.reassign.step4.tasks.testDBConnection.title':'Test DB Connection',
-  'services.reassign.step4.tasks.testDBConnection.tooltip':'Database Host: {0}\n' +
-  'Database Type: {1}\n' +
-  'Database Name: {2}\n' +
-  'Username: {3}\n' +
-  'Password: {4}\n' +
-  'JDBC Driver Class: {5}\n' +
-  'Database URL: {6}',
-  'services.reassign.rollback.confirm':'Are you sure?',
+  'services.reassign.step4.tasks.stopRequiredServices.title':'停止所需服务',
+  'services.reassign.step4.tasks.createHostComponents.title':'新建 {0}',
+  'services.reassign.step4.tasks.putHostComponentsInMaintenanceMode.title':'禁用 {0}',
+  'services.reassign.step4.tasks.reconfigure.title':'重新配置 {0}',
+  'services.reassign.step4.tasks.save.configuration.note':'此配置由 {0}向导创建',
+  'services.reassign.step4.tasks.installHostComponents.title':'安装 {0}',
+  'services.reassign.step4.tasks.startZooKeeperServers.title':'启动 ZooKeeper Servers',
+  'services.reassign.step4.tasks.startNameNode.title':'启动 NameNode',
+  'services.reassign.step4.tasks.stopHostComponentsInMaintenanceMode.title':'停止 {0}',
+  'services.reassign.step4.tasks.deleteHostComponents.title':'删除禁用{0}',
+  'services.reassign.step4.tasks.startRequiredServices.title':'启动所需服务',
+  'services.reassign.step4.tasks.cleanMySqlServer.title':'清理MYSQL的server',
+  'services.reassign.step4.tasks.testHiveMysqlConnection.title':'测试 MYSQL 的连接',
+  'services.reassign.step4.tasks.configureMySqlServer.title':'配置MYSQL的Server',
+  'services.reassign.step4.tasks.startMySqlServer.title':'开启MYSQL的Server',
+  'services.reassign.step4.tasks.restartMySqlServer.title':'重启MYSQL的Server',
+  'services.reassign.step4.tasks.startServices.title':'开启服务',
+  'services.reassign.step4.tasks.testDBConnection.title':'测试数据库的连接',
+  'services.reassign.step4.tasks.testDBConnection.tooltip':'数据库主机: {0}\n' +
+  '数据库类型: {1}\n' +
+  '数据块名称: {2}\n' +
+  '用户名: {3}\n' +
+  '密码: {4}\n' +
+  'JDBC驱动类: {5}\n' +
+  '数据库的URL: {6}',
+  'services.reassign.rollback.confirm':'确定么?',
 
 
-  'services.reassign.step4.task0.title':'Stop Required Services',
-  'services.reassign.step4.task1.title':'Create {0}',
-  'services.reassign.step4.task2.title':'Disable {0}',
-  'services.reassign.step4.task3.title':'Reconfigure {0}',
-  'services.reassign.step4.save.configuration.note':'This configuration is created by Move {0} wizard',
-  'services.reassign.step4.task4.title':'Install {0}',
-  'services.reassign.step4.task5.title':'Start ZooKeeper Servers',
-  'services.reassign.step4.task6.title':'Start NameNode',
-  'services.reassign.step4.task7.title':'Delete disabled {0}',
-  'services.reassign.step4.task8.title':'Start Required Services',
-  'services.reassign.step4.tasks.startNewMySqlServer.title':'Start New MYSQL Server',
-  'services.reassign.step4.status.success': 'Successfully moved <b>{0}</b> from <b>{1}</b> host to <b>{2}</b> host',
-  'services.reassign.step4.status.success.withManualSteps': 'Proceed to the next step',
-  'services.reassign.step4.status.failed': 'Failed to move <b>{0}</b> from <b>{1}</b> host to <b>{2}</b> host',
-  'services.reassign.step4.status.info': 'Reassigning {0}. \nPlease wait for all tasks to be completed.',
-  'services.reassign.step4.retry': 'You can click on the Retry or Abort button to retry failed task or abort changes',
-  'services.reassign.step4.abortError': 'Error in aborting changes.',
-  'services.reassign.step5.header': 'Manual commands',
+  'services.reassign.step4.task0.title':'停止所需的服务',
+  'services.reassign.step4.task1.title':'新建 {0}',
+  'services.reassign.step4.task2.title':'关闭 {0}',
+  'services.reassign.step4.task3.title':'重新配置 {0}',
+  'services.reassign.step4.save.configuration.note':'此配置由移动{0}向导创建',
+  'services.reassign.step4.task4.title':'安装 {0}',
+  'services.reassign.step4.task5.title':'启动ZooKeeper服务器',
+  'services.reassign.step4.task6.title':'开启 NameNode',
+  'services.reassign.step4.task7.title':'删除禁用{0}',
+  'services.reassign.step4.task8.title':'启动所需服务',
+  'services.reassign.step4.tasks.startNewMySqlServer.title':'启动新的MYSQL服务器',
+  'services.reassign.step4.status.success': '成功地将<b>{0}</b>从<b>{1}</b>主机移动到<b>{2}</b>主机',
+  'services.reassign.step4.status.success.withManualSteps': '继续下一步',
+  'services.reassign.step4.status.failed': '未能将<b>{0}</b>从<b>{1}</b>主机移动到<b>{2}</b>主机',
+  'services.reassign.step4.status.info': '重赋值 {0}. \n 请等待所有任务完成.',
+  'services.reassign.step4.retry': '可以单击重试或中止按钮重试失败的任务或中止更改',
+  'services.reassign.step4.abortError': '中止更改中的错误.',
+  'services.reassign.step5.header': '手动命令',
   'services.reassign.step5.body.namenode':
       '<div class="alert alert-info">' +
       '<ol>' +
-      '<li>Copy the contents of <b>{0}</b> on the source host <b>{1}</b> to <b>{0}</b> on the target host <b>{2}</b>.</li>' +
-      '<li>Login to the target host <b>{2}</b> and change permissions for the NameNode dirs by running:' +
+      '<li>将源主机<b>{0}</b>上的<b>{1}</b>的内容复制到目标主机<b>{0}</b>上的<b>{2}</b>。</li>' +
+      '<li>登录到目标主机<b>{2}</b>，并通过运行:' +
       '<div class="code-snippet">chown -R {3}:{5} {6}</div></li>' +
-      '<li>Create marker directory by running:' +
+      '<li>通过运行:' +
       '<div class="code-snippet">mkdir -p /var/lib/hdfs/namenode/formatted</div></li>' +
       '</ol>' +
       '</div>',
   'services.reassign.step5.body.namenode_ha':
       '<div class="alert alert-info">' +
       '<ol>' +
-      '<li>Login to the NameNode host <b>{4}</b>.</li>' +
-      '<li>Reset automatic failover information in ZooKeeper by running:' +
+      '<li>登录到NameNode主机 <b>{4}</b>.</li>' +
+      '<li>通过运行，重置ZooKeeper中的自动故障转移信息:' +
       '<div class="code-snippet">sudo su {3} -l -c \'hdfs zkfc -formatZK\'</div></li>' +
       '</ol>' +
       '</div>' +
       '<div class="alert alert-info">' +
       '<ol start="3">' +
-      '<li>Login to the newly installed NameNode host <b>{2}</b>.<br>' +
-      '<div class="alert alert-warn"><strong>Important!</strong> Be sure to login to the newly installed NameNode host.<br>This is a different host from the Steps 1 and 2 above.</div>' +
+      '<li>登录到新安装的NameNode主机 <b>{2}</b>.<br>' +
+      '<div class="alert alert-warn"><strong>Important!</strong>确保登录到新安装的NameNode主机。<br>这是与上述步骤1和2不同的主机。</div>' +
       '</li>' +
-      '<li>Initialize the metadata by running:' +
+      '<li>通过运行:' +
       "<div class='code-snippet'>sudo su {3} -l -c 'hdfs namenode -bootstrapStandby'</div></li>" +
       '</ol>' +
       '</div>',
   'services.reassign.step5.body.secondary_namenode':
       '<div class="alert alert-info">' +
       '<ol>' +
-      '<li>Copy the contents of <b>{0}</b> on the source host <b>{1}</b> to <b>{0}</b> on the target host <b>{2}</b>.</li>' +
-      '<li>Login to the target host <b>{2}</b> and change permissions for the SNameNode dirs by running:' +
+      '<li>将源主机<b>{0}</b>上的<b>{1}</b>的内容复制到目标主机<b>{0}</b>上的<b>{2}</b>。</li>' +
+      '<li>登录到目标主机<b>{2}</b>，并通过运行：' +
       '<div class="code-snippet">chown -R {3}:{5} {6}</div></li>' +
       '</ol>' +
       '</div>',
   'services.reassign.step5.body.oozie_server':
     '<div class="alert alert-info">' +
     '<ol>' +
-    '<li>On <b>{1}</b> copy the contents of' +
+    '<li>On <b>{1}</b>复制' +
     '<div class="code-snippet"><b>/hadoop/oozie/data/oozie-db</b></div></li>' +
-    '<li>To the target host <b>{2}</b></li>' +
-    '<li>If the directory doesn\'t exists you can create by running' +
+    '<li>到目标主机 <b>{2}</b></li>' +
+    '<li>如果目录不存在，可以通过运行' +
     '<div class="code-snippet">mkdir -p /hadoop/oozie/data/oozie-db</div></li>' +
-    '<li>Update directory permissions by running' +
+    '<li>通过运行' +
     '<div class="code-snippet">chown -R oozie:{5} /hadoop/oozie/data</div></li>' +
     '</ol>' +
     '</div>',
   'services.reassign.step5.body.mysql_server':
     '<div class="alert alert-info">' +
     '<ol>' +
-    '<li>On <b>{1}</b> using a terminal you can export your Metastore DB (MYSQL) using:' +
+    '<li>在<b>{1}</b>上使用终端，可以使用以下命令导出Metastore DB(MYSQL)：' +
     '<div class="code-snippet">mysqldump db_name > backup-file.sql</div></li>' +
-    '<li>Copy the file to the target host <b>{2}</b> hosting the MySQL DB</li>' +
-    '<li>Execute this SQL inside <b>mysql<b>' +
+    '<li>将文件复制到承载MySQL DB的目标主机<b>{2}</b>。</li>' +
+    '<li>在<b>mysql<b>里执行这个SQL' +
     '<div class="code-snippet">CREATE DATABASE db_name;</div></li>' +
-    '<li>Import the database using' +
+    '<li>导入数据库，用下面这句话' +
     '<div class="code-snippet">mysql db_name < backup-file.sql</div></li>' +
     '</ol>' +
     '</div>',
   'services.reassign.step5.body.app_timeline_server': '<div class="alert alert-info">' +
   '<ol>' +
-  '<li>Copy <b>{7}/{8}</b> from the source host <b>{1}</b> to <b>{7}/{8}</b> on the target host <b>{2}</b>.</li>' +
-  '<li>Login to the target host <b>{2}</b> and change permissions by running:' +
+  '<li>在目标主机<b>{2}</b>上从源主机<b>{1}</b>复制<b>{7}/{8}</b>。</li>' +
+  '<li>登录到目标主机<b>{2}</b>，并通过运行：' +
   '<div class="code-snippet">chown -R {3}:{5} {7}/{8}</div></li>' +
   '<div class="code-snippet">chmod -R 700 {7}/{8}</div></li>' +
   '</ol>' +
   '</div>',
-  'services.reassign.step5.body.securityNotice': '<div class="alert alert-info"> <div class="alert alert-warn"> <strong>Note: </strong> Secure cluster' +
-    ' requires generating necessary principals for reassigned component and creating keytab files with the principal on ' +
-    'the target host. The keytab file should be accessible to the service user.</div> {0} </div>',
-  'services.reassign.step5.body.securityConfigsList': 'Create keytab file <b>{0}</b> with principal <b>{1}</b> on <b>{2}</b> host.',
-  'services.reassign.step5.body.proceedMsg': 'Please proceed once you have completed the steps above',
-  'services.reassign.step5.confirmPopup.body': 'Please confirm that you have run the manual steps before continuing.',
-  'services.reassign.step6.header': 'Start and Test services',
-  'services.reassign.step6.tasks.putHostComponentsInMaintenanceMode.title':'Disable {0}',
-  'services.reassign.step6.tasks.deleteHostComponents.title': 'Delete disabled {0}',
-  'services.reassign.step6.tasks.startAllServices.title': 'Start All Services',
-  'services.reassign.step6.tasks.installPxf.title': 'Install PXF on NameNode',
-  'services.reassign.step6.tasks.stopMysqlService.title': 'Stop Mysql Server',
-  'services.reassign.step6.tasks.stopHostComponentsInMaintenanceMode.title': 'Stop {0}',
-  'services.reassign.step6.tasks.startDatanodes.title': 'Start DataNodes',
-  'services.reassign.step6.status.success': 'Successfully moved <b>{0}</b> from <b>{1}</b> host to <b>{2}</b> host.',
-  'services.reassign.step6.status.failed': 'Failed to move <b>{0}</b> from <b>{1}</b> host to <b>{2}</b> host.',
-  'services.reassign.step6.status.info': 'Reassigning {0}. \nPlease wait for all tasks to be completed.',
-  'services.reassign.step7.header': 'Rollback',
-  'services.reassign.step7.info': 'Rollback in progress',
-  'services.reassign.step7.failed': 'Rollback failed',
-  'services.reassign.step7.success': 'Rollback successfully completed',
+  'services.reassign.step5.body.securityNotice': '<div class="alert alert-info"> <div class="alert alert-warn"> <strong>Note: </strong> 安全集群' +
+    ' 需要为重新分配的组件生成必要的主体，并创建具有以下主体的keytab文件 ' +
+    '目标主机。服务用户可以访问keytab文件。</div> {0} </div>',
+  'services.reassign.step5.body.securityConfigsList': '在<b>{2}</b>主机上用主体<b>{1}</b>创建keytab文件<b>{0}</b>。',
+  'services.reassign.step5.body.proceedMsg': '完成以上步骤后，请继续进行',
+  'services.reassign.step5.confirmPopup.body': '在继续之前，请确认您已经运行了手动步骤。',
+  'services.reassign.step6.header': '启动和测试服务',
+  'services.reassign.step6.tasks.putHostComponentsInMaintenanceMode.title':'禁用 {0}',
+  'services.reassign.step6.tasks.deleteHostComponents.title': '删除禁用 {0}',
+  'services.reassign.step6.tasks.startAllServices.title': '开启所有服务',
+  'services.reassign.step6.tasks.installPxf.title': '在NameNode上安装PXF',
+  'services.reassign.step6.tasks.stopMysqlService.title': '停止Mysql服务器',
+  'services.reassign.step6.tasks.stopHostComponentsInMaintenanceMode.title': '停止 {0}',
+  'services.reassign.step6.tasks.startDatanodes.title': '开启 DataNodes',
+  'services.reassign.step6.status.success': '成功地将<b>{0}</b>从<b>{1}</b>主机移动到<b>{2}</b>主机。',
+  'services.reassign.step6.status.failed': '未能将<b>{0}</b>从<b>{1}</b>主机移动到<b>{2}</b>主机。',
+  'services.reassign.step6.status.info': '重新分配{0}。 \n 请等待所有任务完成.',
+  'services.reassign.step7.header': '回滚',
+  'services.reassign.step7.info': '正在进行回滚',
+  'services.reassign.step7.failed': '回滚失败',
+  'services.reassign.step7.success': '回滚成功完成',
 
   /** services page constants **/
 
