@@ -1350,354 +1350,354 @@ Em.I18n.translations = {
 
 
 
-  'admin.highAvailability':' High Availability',
-  'admin.highAvailability.button.enable':'激活 NameNode HA',
-  'admin.highAvailability.button.disable':'禁用 NameNode HA',
-  'admin.rm_highAvailability.button.enable':'激活 ResourceManager HA',
-  'admin.rm_highAvailability.button.disable':'禁用 ResourceManager HA',
-  'admin.ra_highAvailability.button.enable':'激活 Ranger Admin HA',
-  'admin.highAvailability.disabled':'NameNode HA is disabled',
-  'admin.highAvailability.enabled':'NameNode HA is enabled',
-  'admin.rm_highAvailability.disabled':'ResourceManager HA is disabled',
-  'admin.rm_highAvailability.enabled':'ResourceManager HA is enabled',
-  'admin.highAvailability.confirmRollbackHeader':'Confirm Rollback',
-  'admin.highAvailability.confirmRollbackBody':'This will rollback all operations that were done in HA wizard',
-  'admin.highAvailability.confirmManualRollbackBody':'You are in the process of enabling NameNode HA. If you exit now, you must follow manual instructions to revert back to the non-HA setup as documented in the Ambari User Guide\'s <i>Rolling Back NameNode HA</i> section.  Are you sure you want to exit the wizard?',
-  'admin.highAvailability.error.hostsNum':'You must have at least 3 hosts in your cluster to enable NameNode HA.',
-  'admin.highAvailability.error.namenodeStarted':'NameNode must be running before you enable NameNode HA.',
-  'admin.highAvailability.error.maintenanceMode':'In order to enable NameNode HA, all services, and hosts with master components need to be out of Maintenance Mode.',
-  'admin.highAvailability.error.zooKeeperNum':'You must have at least 3 ZooKeeper Servers in your cluster to enable NameNode HA.',
-  'admin.rm_highAvailability.error.hostsNum':'You must have at least 3 hosts in your cluster to enable ResourceManager HA.',
-  'admin.rm_highAvailability.error.zooKeeperNum':'You must have at least 3 ZooKeeper Servers in your cluster to enable ResourceManager HA.',
-  'admin.rm_highAvailability.closePopup':'Enable ResourceManager HA Wizard is in progress. You must allow the wizard to complete for Ambari to be in usable state. If you choose to quit, you must follow manual instructions to complete or revert enabling ResourceManager HA as documented in the Ambari User Guide. Are you sure you want to exit the wizard?',
+    'admin.highAvailability':' High Availability',
+    'admin.highAvailability.button.enable':'激活 NameNode HA',
+    'admin.highAvailability.button.disable':'禁用 NameNode HA',
+    'admin.rm_highAvailability.button.enable':'激活 ResourceManager HA',
+    'admin.rm_highAvailability.button.disable':'禁用 ResourceManager HA',
+    'admin.ra_highAvailability.button.enable':'激活 Ranger Admin HA',
+    'admin.highAvailability.disabled':'NameNode HA is disabled',
+    'admin.highAvailability.enabled':'NameNode HA is enabled',
+    'admin.rm_highAvailability.disabled':'ResourceManager HA is disabled',
+    'admin.rm_highAvailability.enabled':'ResourceManager HA is enabled',
+    'admin.highAvailability.confirmRollbackHeader':'Confirm Rollback',
+    'admin.highAvailability.confirmRollbackBody':'This will rollback all operations that were done in HA wizard',
+    'admin.highAvailability.confirmManualRollbackBody':'You are in the process of enabling NameNode HA. If you exit now, you must follow manual instructions to revert back to the non-HA setup as documented in the Ambari User Guide\'s <i>Rolling Back NameNode HA</i> section.  Are you sure you want to exit the wizard?',
+    'admin.highAvailability.error.hostsNum':'集群中至少要有3个主机以激活NameNode HA。',
+    'admin.highAvailability.error.namenodeStarted':'在激活NameNode HA前必须先运行NameNode。',
+    'admin.highAvailability.error.maintenanceMode':'为了激活NameNode HA，所有的服务和带有主节点组件的主机都需要被解除维护模式。',
+    'admin.highAvailability.error.zooKeeperNum':'集群中至少要有3个ZooKeeper服务器以激活NameNode HA。',
+    'admin.rm_highAvailability.error.hostsNum':'集群中至少要有3个主机以激活ResourceManager HA.',
+    'admin.rm_highAvailability.error.zooKeeperNum':'集群中至少要有3个ZooKeeper服务器以激活ResourceManager HA.',
+    'admin.rm_highAvailability.closePopup':'正在进行ResourceManager HA激活向导。必须完成该向导以使Ambari进入到可用状态。如果选择退出，必须遵照Ambari用户指导中收录的手动方法来完成或者复原ResourceManager HA的激活。确定退出向导？',
 
-  'admin.highAvailability.wizard.header':'Enable NameNode HA Wizard',
-  'admin.highAvailability.wizard.progressPage.notice.inProgress':'Please wait while NameNode HA is being deployed.',
-  'admin.highAvailability.wizard.progressPage.header':'Deploy',
-  'admin.highAvailability.wizard.step1.header':'Get Started',
-  'admin.highAvailability.wizard.step1.nameserviceid.tooltip.title':'Nameservice ID',
-  'admin.highAvailability.wizard.step1.nameserviceid.tooltip.content':'This will be the ID for the NameNode HA cluster. For example, if you set Nameservice ID to <b>mycluster</b>, the logical URI for HDFS will be <b>hdfs://mycluster</b>.',
-  'admin.highAvailability.wizard.step1.nameserviceid':'Nameservice ID',
-  'admin.highAvailability.wizard.step1.nameserviceid.error':'Must consist of letters, numbers, and hyphens. Cannot begin or end with a hyphen.',
-  'admin.highAvailability.wizard.step2.header':'Select Hosts',
-  'admin.highAvailability.wizard.step3.header':'Review',
-  'admin.highAvailability.wizard.step4.header':'Create Checkpoint',
-  'admin.highAvailability.wizard.step4.error.nameNode':'NameNode is in the process of being stopped. Please make sure that namenode is running to create checkpoint successfully.',
-  'admin.highAvailability.wizard.step5.header':'Configure Components',
-  'admin.highAvailability.wizard.step6.header':'Initialize JournalNodes',
-  'admin.highAvailability.wizard.step7.header':'Start Components',
-  'admin.highAvailability.wizard.step8.header':'Initialize Metadata',
-  'admin.highAvailability.wizard.step9.header':'Finalize HA Setup',
-  'admin.highAvailability.wizard.step4.bodyHeader':'Manual Steps Required: Create Checkpoint on NameNode',
-  'admin.highAvailability.wizard.step6.bodyHeader':'Manual Steps Required: Initialize JournalNodes',
-  'admin.highAvailability.wizard.step8.bodyHeader':'Manual Steps Required: Initialize NameNode HA Metadata',
+    'admin.highAvailability.wizard.header':'激活NameNode HA向导',
+    'admin.highAvailability.wizard.progressPage.notice.inProgress':'请等待NameNode HA完成部署。',
+    'admin.highAvailability.wizard.progressPage.header':'部署',
+    'admin.highAvailability.wizard.step1.header':'开始',
+    'admin.highAvailability.wizard.step1.nameserviceid.tooltip.title':'Nameservice ID',
+    'admin.highAvailability.wizard.step1.nameserviceid.tooltip.content':'这将作为NameNode HA集群的ID。例如，如果你将Nameservice ID设置为<b>mycluster</b>，则HDFS的逻辑URI将会是<b>hdfs://mycluster</b>。',
+    'admin.highAvailability.wizard.step1.nameserviceid':'Nameservice ID',
+    'admin.highAvailability.wizard.step1.nameserviceid.error':'必须包含字母，数字和连字符，并且不能以连字符开头或者结尾。',
+    'admin.highAvailability.wizard.step2.header':'选择主机',
+    'admin.highAvailability.wizard.step3.header':'回看',
+    'admin.highAvailability.wizard.step4.header':'创建检查点',
+    'admin.highAvailability.wizard.step4.error.nameNode':'NameNode正在被停止。请确保namenode正在运行以成功创建检查点。',
+    'admin.highAvailability.wizard.step5.header':'设置组件',
+    'admin.highAvailability.wizard.step6.header':'初始化JournalNodes',
+    'admin.highAvailability.wizard.step7.header':'启动组件',
+    'admin.highAvailability.wizard.step8.header':'初始化Metadata',
+    'admin.highAvailability.wizard.step9.header':'完成HA的部署',
+    'admin.highAvailability.wizard.step4.bodyHeader':'需要手动配置：在NameNode上设置检查点',
+    'admin.highAvailability.wizard.step6.bodyHeader':'需要手动配置：初始化JournalNodes',
+    'admin.highAvailability.wizard.step8.bodyHeader':'需要手动配置：初始化NameNode HA Metadata',
 
-  'admin.rollbackHighAvailability.wizard.step1.header':'Select Hosts page',
-  'admin.rollbackHighAvailability.wizard.step2.header':'Create Checkpoint page',
-  'admin.rollbackHighAvailability.wizard.step3.header':'Progress page',
+    'admin.rollbackHighAvailability.wizard.step1.header':'选择主机分页',
+    'admin.rollbackHighAvailability.wizard.step2.header':'创建检查点分页',
+    'admin.rollbackHighAvailability.wizard.step3.header':'进程分页',
 
-  'admin.highAvailability.wizard.step5.notice.inProgress':'Please wait while the wizard configures the components.',
-  'admin.highAvailability.wizard.step7.notice.inProgress':'Please wait while the wizard starts the components.',
-  'admin.highAvailability.wizard.step9.notice.inProgress':'Please wait while the wizard finalizes the HA setup.',
-  'admin.highAvailability.wizard.rollback.notice.inProgres':'Reverting Back to Non-HA Setup',
+    'admin.highAvailability.wizard.step5.notice.inProgress':'请等待向导完成组件的安装。',
+    'admin.highAvailability.wizard.step7.notice.inProgress':'请等待向导开启组件。',
+    'admin.highAvailability.wizard.step9.notice.inProgress':'请等待向导完成HA的部署。',
+    'admin.highAvailability.wizard.rollback.notice.inProgres':'正在回退到非HA部署。',
 
-  'admin.highAvailability.wizard.step5.header.title':'Configure Components',
-  'admin.highAvailability.wizard.step7.header.title':'Start Components',
-  'admin.highAvailability.wizard.step9.header.title':'Finalize HA Setup',
-  'admin.highAvailability.wizard.rollback.header.title':'Reverting Back to Non-HA Setup.',
+    'admin.highAvailability.wizard.step5.header.title':'安装组件',
+    'admin.highAvailability.wizard.step7.header.title':'启动组件',
+    'admin.highAvailability.wizard.step9.header.title':'完成HA的部署',
+    'admin.highAvailability.wizard.rollback.header.title':'回退到非HA部署',
 
-  'admin.highAvailability.wizard.step5.task0.title':'Stop All Services',
-  'admin.highAvailability.wizard.step5.task1.title':'Install Additional NameNode',
-  'admin.highAvailability.wizard.step5.task2.title':'Install JournalNodes',
-  'admin.highAvailability.wizard.step5.task3.title':'Reconfigure HDFS',
-  'admin.highAvailability.wizard.step5.task4.title':'Start JournalNodes',
-  'admin.highAvailability.wizard.step5.task5.title':'Disable Secondary NameNode',
+    'admin.highAvailability.wizard.step5.task0.title':'停止所有服务Stop All Services',
+    'admin.highAvailability.wizard.step5.task1.title':'安装额外的NameNode',
+    'admin.highAvailability.wizard.step5.task2.title':'安装JournalNodes',
+    'admin.highAvailability.wizard.step5.task3.title':'重新安装HDFS',
+    'admin.highAvailability.wizard.step5.task4.title':'开启JournalNodes',
+    'admin.highAvailability.wizard.step5.task5.title':'禁用Secondary NameNode',
 
-  'admin.highAvailability.wizard.step7.task0.title':'Start ZooKeeper Servers',
-  'admin.highAvailability.wizard.step7.task1.title':'Start Ambari Infra',
-  'admin.highAvailability.wizard.step7.task2.title':'Start Ranger',
-  'admin.highAvailability.wizard.step7.task3.title':'Start NameNode',
+    'admin.highAvailability.wizard.step7.task0.title':'开启ZooKeeper服务',
+    'admin.highAvailability.wizard.step7.task1.title':'开启Ambari Infra',
+    'admin.highAvailability.wizard.step7.task2.title':'开启Ranger',
+    'admin.highAvailability.wizard.step7.task3.title':'开启NameNode',
 
-  'admin.highAvailability.wizard.step9.task0.title':'Start Additional NameNode',
-  'admin.highAvailability.wizard.step9.task1.title':'Install Failover Controllers',
-  'admin.highAvailability.wizard.step9.task2.title':'Start Failover Controllers',
-  'admin.highAvailability.wizard.step9.task3.title':'Install PXF',
-  'admin.highAvailability.wizard.step9.task4.title':'Reconfigure Ranger',
-  'admin.highAvailability.wizard.step9.task5.title':'Reconfigure HBase',
-  'admin.highAvailability.wizard.step9.task6.title':'Reconfigure AMS',
-  'admin.highAvailability.wizard.step9.task7.title':'Reconfigure Accumulo',
-  'admin.highAvailability.wizard.step9.task8.title':'Reconfigure HAWQ',
-  'admin.highAvailability.wizard.step9.task9.title':'Delete Secondary NameNode',
-  'admin.highAvailability.wizard.step9.task10.title':'Stop HDFS',
-  'admin.highAvailability.wizard.step9.task11.title':'Start All Services',
-  'admin.highAvailability.wizard.step9.notice.completed':'NameNode HA has been enabled successfully.',
+    'admin.highAvailability.wizard.step9.task0.title':'开启额外的NameNode',
+    'admin.highAvailability.wizard.step9.task1.title':'安装Failover Controllers',
+    'admin.highAvailability.wizard.step9.task2.title':'开启Failover Controllers',
+    'admin.highAvailability.wizard.step9.task3.title':'安装PXF',
+    'admin.highAvailability.wizard.step9.task4.title':'重新配置Ranger',
+    'admin.highAvailability.wizard.step9.task5.title':'重新配置HBase',
+    'admin.highAvailability.wizard.step9.task6.title':'重新配置AMS',
+    'admin.highAvailability.wizard.step9.task7.title':'重新配置Accumulo',
+    'admin.highAvailability.wizard.step9.task8.title':'重新配置HAWQ',
+    'admin.highAvailability.wizard.step9.task9.title':'删除Secondary NameNode',
+    'admin.highAvailability.wizard.step9.task10.title':'停用HDFS',
+    'admin.highAvailability.wizard.step9.task11.title':'开启所有服务',
+    'admin.highAvailability.wizard.step9.notice.completed':'NameNode HA被成功激活。',
 
-  'admin.highAvailability.wizard.step3.curNameNode': '<b>Current NameNode:</b> ',
-  'admin.highAvailability.wizard.step3.addNameNode': '<b>Additional NameNode:</b> ',
-  'admin.highAvailability.wizard.step3.secNameNode': '<b>Secondary NameNode:</b> ',
-  'admin.highAvailability.wizard.step3.journalNode': '<b>JournalNode:</b> ',
-  'admin.highAvailability.wizard.step3.toBeInstalled': 'TO BE INSTALLED',
-  'admin.highAvailability.wizard.step3.toBeDeleted': 'TO BE DELETED',
-  'admin.highAvailability.wizard.step4.ckNotCreated':'Checkpoint not created yet',
-  'admin.highAvailability.wizard.step4.ckCreated':'Checkpoint created',
-  'admin.highAvailability.step4.save.configuration.note':'This configuration is created by Enable {0} HA wizard',
-  'admin.highAvailability.wizard.step6.jsNoInit':'JournalNodes not initialized yet',
-  'admin.highAvailability.wizard.step6.jsInit':'JournalNodes initialized',
-  'admin.highAvailability.wizard.step6.jnStopped':'All JournalNodes should be started before initializing',
-  'admin.highAvailability.wizard.step8.metaNoInit':'Metadata not initialized yet',
-  'admin.highAvailability.wizard.step8.confirmPopup.body':'Please confirm that you have run the manual steps before continuing.',
-  'admin.highAvailability.wizard.step9.hawq.confirmPopup.header':'Additional Steps Required for HAWQ',
-  'admin.highAvailability.wizard.step9.hawq.confirmPopup.body':'You must refer to the HAWQ documentation under section ' +
-     '"HAWQ Filespaces and High Availability Enabled HDFS" and perform the required manual steps to update the HAWQ filespace ' +
-     'location. HAWQ will not use HDFS nameservice unless the steps have been completed successfully.',
+    'admin.highAvailability.wizard.step3.curNameNode': '<b>当前NameNode：</b> ',
+    'admin.highAvailability.wizard.step3.addNameNode': '<b>额外NameNode:</b> ',
+    'admin.highAvailability.wizard.step3.secNameNode': '<b>Secondary NameNode:</b> ',
+    'admin.highAvailability.wizard.step3.journalNode': '<b>JournalNode:</b> ',
+    'admin.highAvailability.wizard.step3.toBeInstalled': '将被安装',
+    'admin.highAvailability.wizard.step3.toBeDeleted': '将被删除',
+    'admin.highAvailability.wizard.step4.ckNotCreated':'检查点未被创建',
+    'admin.highAvailability.wizard.step4.ckCreated':'检查点被创建',
+    'admin.highAvailability.step4.save.configuration.note':'该配置由激活{0}HA向导创建',
+    'admin.highAvailability.wizard.step6.jsNoInit':'JournalNodes未被初始化',
+    'admin.highAvailability.wizard.step6.jsInit':'JournalNodes被初始化',
+    'admin.highAvailability.wizard.step6.jnStopped':'所有的JournalNodes都需要在初始化前被启动',
+    'admin.highAvailability.wizard.step8.metaNoInit':'Metadata未被初始化',
+    'admin.highAvailability.wizard.step8.confirmPopup.body':'请确保在继续之前已经进行过手动配置。',
+    'admin.highAvailability.wizard.step9.hawq.confirmPopup.header':'HAWQ需要的额外步骤',
+    'admin.highAvailability.wizard.step9.hawq.confirmPopup.body':'你必须参照' +
+        '"HAWQ文件空间及高可用激活HDFS"部分下面的HAWQ文件并进行相应的手动配置来更新HAWQ文件空间位置。' +
+        '如果这些配置没有执行成功，则HAWQ不会使用HDFS nameservice。',
 
-  'admin.highAvailability.rollback.header':'Disable NameNode HA Wizard',
-  'admin.highAvailability.rollback.task0.title':'Stop All Services',
-  'admin.highAvailability.rollback.task1.title':'Restore HBase Configurations',
-  'admin.highAvailability.rollback.task2.title':'Restore Accumulo Configurations',
-  'admin.highAvailability.rollback.task3.title':'Restore HAWQ Configurations',
-  'admin.highAvailability.rollback.task4.title':'Stop Failover Controllers',
-  'admin.highAvailability.rollback.task5.title':'Delete Failover Controllers',
-  'admin.highAvailability.rollback.task6.title':'Delete PXF',
-  'admin.highAvailability.rollback.task7.title':'Stop Additional NameNode',
-  'admin.highAvailability.rollback.task8.title':'Stop NameNode',
-  'admin.highAvailability.rollback.task9.title':'Restore HDFS Configurations',
-  'admin.highAvailability.rollback.task10.title':'Enable Secondary NameNode',
-  'admin.highAvailability.rollback.task11.title':'Stop JournalNodes',
-  'admin.highAvailability.rollback.task12.title':'Delete JournalNodes',
-  'admin.highAvailability.rollback.task13.title':'Delete Additional NameNode',
-  'admin.highAvailability.rollback.task14.title':'Start All Services',
-  'admin.highAvailability.rollback.notice.inProgress':'Please wait while the wizard reverts back to the non-HA setup.',
+    'admin.highAvailability.rollback.header':'禁用NameNode HA向导',
+    'admin.highAvailability.rollback.task0.title':'停用所有服务',
+    'admin.highAvailability.rollback.task1.title':'恢复HBase设置',
+    'admin.highAvailability.rollback.task2.title':'恢复Accumulo设置',
+    'admin.highAvailability.rollback.task3.title':'恢复HAWQ设置',
+    'admin.highAvailability.rollback.task4.title':'停用Failover Controllers',
+    'admin.highAvailability.rollback.task5.title':'删除Failover Controllers',
+    'admin.highAvailability.rollback.task6.title':'删除PXF',
+    'admin.highAvailability.rollback.task7.title':'停用额外的NameNode',
+    'admin.highAvailability.rollback.task8.title':'停用NameNode',
+    'admin.highAvailability.rollback.task9.title':'恢复HDFS设置',
+    'admin.highAvailability.rollback.task10.title':'激活Secondary NameNode',
+    'admin.highAvailability.rollback.task11.title':'停用JournalNodes',
+    'admin.highAvailability.rollback.task12.title':'删除JournalNodes',
+    'admin.highAvailability.rollback.task13.title':'删除额外的NameNode',
+    'admin.highAvailability.rollback.task14.title':'开启所有服务',
+    'admin.highAvailability.rollback.notice.inProgress':'请等待向导退回到非HA部署。',
 
-  'admin.highAvailability.rollback.step2.body':
-    '<ol>' +
-      '<li>Login to the NameNode host <b>{1}</b>.</li>' +
-      '<li>Put the NameNode in Safe Mode (read-only mode):' +
-      '<div class="code-snippet">sudo su {0} -l -c \'hdfs dfsadmin -safemode enter\'</div></li>' +
-      '<li>Once in Safe Mode, create a Checkpoint:' +
-      '<div class="code-snippet">sudo su {0} -l -c \'hdfs dfsadmin -saveNamespace\'</div></li>' +
-      '</ol>',
+    'admin.highAvailability.rollback.step2.body':
+        '<ol>' +
+        '<li>登陆到NameNode主机 <b>{1}</b>。</li>' +
+        '<li>将NameNode置为安全模式（只读模式）：' +
+        '<div class="code-snippet">sudo su {0} -l -c \'hdfs dfsadmin -safemode enter\'</div></li>' +
+        '<li>一旦处于安全模式，创建检查点：' +
+        '<div class="code-snippet">sudo su {0} -l -c \'hdfs dfsadmin -saveNamespace\'</div></li>' +
+        '</ol>',
 
-  'admin.highAvailability.wizard.step8.body':
-    '<div class="alert alert-info">' +
-    '<ol>' +
-    '<li>Login to the NameNode host <b>{1}</b>.</li>' +
-    '<li>Initialize the metadata for NameNode automatic failover by running:' +
-    '<div class="code-snippet">sudo su {0} -l -c \'hdfs zkfc -formatZK\'</div></li>' +
-    '</div>' +
-    '<div class="alert alert-info">' +
-    '<ol start="3">' +
-    '<li>Login to the Additional NameNode host <b>{2}</b>.<br>' +
-    '<div class="alert alert-warn"><strong>Important!</strong> Be sure to login to the Additional NameNode host.<br>This is a different host from the Steps 1 and 2 above.</div>' +
-    '</li>' +
-    '<li>Initialize the metadata for the Additional NameNode by running:' +
-    '<div class="code-snippet">sudo su {0} -l -c \'hdfs namenode -bootstrapStandby\'</div></li>' +
-    '</ol>' +
-    '</div>' +
-    'Please proceed once you have completed the steps above.',
-  'admin.highAvailability.wizard.step6.body':
-    '<ol>' +
-    '<li>Login to the NameNode host <b>{1}</b>.</li>' +
-    '<li>Initialize the JournalNodes by running:' +
-    '<div class="code-snippet">sudo su {0} -l -c \'hdfs namenode -initializeSharedEdits\'</div></li>' +
-    '<li>You will be able to proceed once Ambari detects that the JournalNodes have been initialized successfully.</li>' +
-    '</ol>',
-  'admin.highAvailability.wizard.step4.body':
-    '<ol>' +
-    '<li>Login to the NameNode host <b>{1}</b>.</li>' +
-    '<li>Put the NameNode in Safe Mode (read-only mode):' +
-    '<div class="code-snippet">sudo su {0} -l -c \'hdfs dfsadmin -safemode enter\'</div></li>' +
-    '<li>Once in Safe Mode, create a Checkpoint:' +
-    '<div class="code-snippet">sudo su {0} -l -c \'hdfs dfsadmin -saveNamespace\'</div></li>' +
-    '<li>You will be able to proceed once Ambari detects that the NameNode is in Safe Mode and the Checkpoint has been created successfully.</li>'+
-    '<div class="alert alert-warn">If the <b>Next</b> button is enabled before you run the <b>"Step 4: Create a Checkpoint"</b> command, it means there is a recent Checkpoint already and you may proceed without running the <b>"Step 4: Create a Checkpoint"</b> command.</div>' +
-    '</ol>',
-  'admin.highAvailability.wizard.step3.confirm.host.body':'<b>Confirm your host selections.</b>',
-  'admin.highAvailability.wizard.step3.confirm.config.body':'<div class="alert alert-info">' +
-    '<b>Review Configuration Changes.</b></br>' +
-    'The following lists the configuration changes that will be made by the Wizard to enable NameNode HA. This information is for <b> review only </b> and is not editable except for the  <b>dfs.journalnode.edits.dir</b> property' +
-    '</div>',
-  'admin.highAvailability.wizard.step2.body':'Select a host that will be running the additional NameNode.<br/> In addition,' +
-    ' select the hosts to run JournalNodes, which store NameNode edit logs in a fault tolerant manner.',
-  'admin.highAvailability.wizard.step1.body':'This wizard will walk you through enabling NameNode HA on your cluster.<br/>' +
-    'Once enabled, you will be running a Standby NameNode in addition to your Active NameNode.<br/>' +
-    'This allows for an Active-Standby NameNode configuration that automatically performs failover.<br/><br/>' +
-    'The process to enable HA involves a combination of <b>automated steps</b> (that will be handled by the wizard) and ' +
-    '<b>manual steps</b> (that you must perform in sequence as instructed by the wizard).<br/><br/>' +
-    '<b>You should plan a cluster maintenance window and prepare for cluster downtime when enabling NameNode HA.</b>',
-  'admin.highAvailability.wizard.step1.alert':'If you have HBase running, please exit this wizard and stop HBase first.',
-  'admin.highAvailability.wizard.step1.hawq.alert':'<br/><br/>You will need to perform additional manual ' +
-    'steps to update the HAWQ filespace location, once this wizard completes. Refer to the HAWQ documentation under section ' +
-    '"HAWQ Filespaces and High Availability Enabled HDFS" for more information.',
+    'admin.highAvailability.wizard.step8.body':
+        '<div class="alert alert-info">' +
+        '<ol>' +
+        '<li>登陆到NameNode主机<b>{1}</b>。</li>' +
+        '<li>通过执行如下命令来为NameNode自动故障转移初始化元数据：' +
+        '<div class="code-snippet">sudo su {0} -l -c \'hdfs zkfc -formatZK\'</div></li>' +
+        '</div>' +
+        '<div class="alert alert-info">' +
+        '<ol start="3">' +
+        '<li>登陆到额外NameNode主机<b>{2}</b>。<br>' +
+        '<div class="alert alert-warn"><strong>重要!</strong> 确保登陆上额外NameNode主机。<br>该主机有别于步骤1和步骤的主机。</div>' +
+        '</li>' +
+        '<li>通过执行如下命令来为额外NameNode自动故障转移初始化元数据：' +
+        '<div class="code-snippet">sudo su {0} -l -c \'hdfs namenode -bootstrapStandby\'</div></li>' +
+        '</ol>' +
+        '</div>' +
+        '一旦完成了上述步骤，请继续进行。',
+    'admin.highAvailability.wizard.step6.body':
+        '<ol>' +
+        '<li>登陆到NameNode主机<b>{1}</b>。</li>' +
+        '<li>通过执行如下命令以初始化JournalNodes：' +
+        '<div class="code-snippet">sudo su {0} -l -c \'hdfs namenode -initializeSharedEdits\'</div></li>' +
+        '<li>一旦Ambari探测到JournalNodes已经初始化成功，可以继续进行下面的步骤。</li>' +
+        '</ol>',
+    'admin.highAvailability.wizard.step4.body':
+        '<ol>' +
+        '<li>登陆到NameNode主机<b>{1}</b>。</li>' +
+        '<li>将NameNode置为安全模式(只读模式)：' +
+        '<div class="code-snippet">sudo su {0} -l -c \'hdfs dfsadmin -safemode enter\'</div></li>' +
+        '<li>一旦处于安全模式，创建检查点：' +
+        '<div class="code-snippet">sudo su {0} -l -c \'hdfs dfsadmin -saveNamespace\'</div></li>' +
+        '<li>一旦Ambari探测到NameNode处于安全模式并且检查点被成功创建，可以继续进行下面的步骤。</li>'+
+        '<div class="alert alert-warn">如果<b>继续</b>按钮在执行<b>“步骤4：创建检查点”</b>命令之前处于激活状态，意味着当前检查点已就绪，可以不执行<b>“步骤4：创建检查点”</b>而直接继续进行下面的步骤。</div>' +
+        '</ol>',
+    'admin.highAvailability.wizard.step3.confirm.host.body':'<b>确认主机选择。</b>',
+    'admin.highAvailability.wizard.step3.confirm.config.body':'<div class="alert alert-info">' +
+        '<b>回看配置变更。</b></br>' +
+        '向导将会对下面列出的配置作出变更以激活NameNode HA。该信息<b>只用作回看</b>并且除<b>dfs.journalnode.edits.dir</b>属性之外不可进行编辑。' +
+        '</div>',
+    'admin.highAvailability.wizard.step2.body':'选择一个将要运行额外NameNode的主机。<br/> 另外，' +
+        ' 选择将要运行JournalNodes的主机，其将以容错形式存储NameNode编辑日志。',
+    'admin.highAvailability.wizard.step1.body':'本向导将引导你激活集群中的NameNode HA。<br/>' +
+        '一旦激活，除开已启用的NameNode外，还有一个待命NameNode也将被启用。<br/>' +
+        '它允许配置一个待命启用的NameNode来自动进行故障恢复。<br/><br/>' +
+        '激活HA的过程包括<b>自动操作</b>（将由向导自动执行）和 ' +
+        '<b>手动操作</b>（必须按照向导的指示按顺序执行）。<br/><br/>' +
+        '<b>你应当提前打开一个集群维护窗口为当激活NameNode HA时的集群停机做好准备。</b>',
+    'admin.highAvailability.wizard.step1.alert':'如果有HBase正在运行，请退出本向导先将HBase停止。',
+    'admin.highAvailability.wizard.step1.hawq.alert':'<br/><br/>一旦本向导完成，你将需要进行额外的手动操作' +
+        '步骤来更新HAWQ文件空间位置。获取更多信息，请参考' +
+        '"HAWQ文件空间及高可用激活HDFS"部分下面的HAWQ文档。',
 
-  'admin.rm_highAvailability.wizard.header': 'Enable ResourceManager HA Wizard',
-  'admin.rm_highAvailability.wizard.step1.header': 'Get Started',
-  'admin.rm_highAvailability.wizard.step1.body':'This wizard will walk you through enabling ResourceManager HA on your cluster.<br/>' +
-      'Once enabled, you will be running a Standby ResourceManager in addition to your Active ResourceManager.<br/>' +
-      'This allows for an Active-Standby ResourceManager configuration that automatically performs failover.<br/><br/>' +
-      '<b>You should plan a cluster maintenance window and prepare for cluster downtime when enabling ResourceManager HA.</b>',
-  'admin.rm_highAvailability.wizard.step2.header': 'Select Host',
-  'admin.rm_highAvailability.wizard.step2.body': 'Select a host that will be running the additional ResourceManager',
-  'admin.rm_highAvailability.wizard.step3.header': 'Review',
-  'admin.rm_highAvailability.wizard.step3.confirm.host.body':'<b>Confirm your host selections.</b>',
+    'admin.rm_highAvailability.wizard.header': '激活ResourceManager HA向导',
+    'admin.rm_highAvailability.wizard.step1.header': '开始',
+  'admin.rm_highAvailability.wizard.step1.body':'本向导将引导你激活集群中的ResourceManager HA。<br/>' +
+      '一旦激活，除开已启用的ResourceManager外，还有一个待命ResourceManager也将被启用。<br/>' +
+      '它允许配置一个待命启用的ResourceManager来自动进行故障恢复。<br/><br/>' +
+      '<b>你应当提前打开一个集群维护窗口为当激活ResourceManager HA时的集群停机做好准备。</b>',
+  'admin.rm_highAvailability.wizard.step2.header': '选择主机',
+  'admin.rm_highAvailability.wizard.step2.body': '选择一个将要运行额外ResourceManager的主机',
+  'admin.rm_highAvailability.wizard.step3.header': '回看',
+  'admin.rm_highAvailability.wizard.step3.confirm.host.body':'<b>确认主机选择。</b>',
   'admin.rm_highAvailability.wizard.step3.confirm.config.body':'<div class="alert alert-info">' +
-      '<b>Review Configuration Changes.</b></br>' +
-      'The following lists the configuration changes that will be made by the Wizard to enable ResourceManager HA. This information is for <b> review only </b> and is not editable.' +
+      '<b>回看配置变更。</b></br>' +
+      '向导将会对下面列出的配置作出变更以激活ResourceManager HA。该信息<b>只用作回看</b>并且不可进行编辑。' +
       '</div>',
-  'admin.rm_highAvailability.wizard.step3.currentRM': 'Current ResourceManager',
-  'admin.rm_highAvailability.wizard.step3.additionalRM': 'Additional ResourceManager',
-  'admin.rm_highAvailability.wizard.step4.header': 'Configure Components',
-  'admin.rm_highAvailability.wizard.step4.task0.title': 'Stop Required Services',
-  'admin.rm_highAvailability.wizard.step4.task1.title': 'Install Additional ResourceManager',
-  'admin.rm_highAvailability.wizard.step4.task2.title': 'Reconfigure YARN',
-  'admin.rm_highAvailability.wizard.step4.task3.title': 'Reconfigure HAWQ',
-  'admin.rm_highAvailability.wizard.step4.task4.title': 'Reconfigure HDFS',
-  'admin.rm_highAvailability.wizard.step4.task5.title': 'Start All Services',
-  'admin.rm_highAvailability.wizard.step4.notice.inProgress':'Please wait while ResourceManager HA is being deployed.',
-  'admin.rm_highAvailability.wizard.step4.notice.completed':'ResourceManager HA has been enabled successfully.',
+  'admin.rm_highAvailability.wizard.step3.currentRM': '当前ResourceManager',
+  'admin.rm_highAvailability.wizard.step3.additionalRM': '额外ResourceManager',
+  'admin.rm_highAvailability.wizard.step4.header': '安装组件',
+  'admin.rm_highAvailability.wizard.step4.task0.title': '停用需要的服务',
+  'admin.rm_highAvailability.wizard.step4.task1.title': '部署额外ResourceManager',
+  'admin.rm_highAvailability.wizard.step4.task2.title': '重新配置YARN',
+  'admin.rm_highAvailability.wizard.step4.task3.title': '重新配置HAWQ',
+  'admin.rm_highAvailability.wizard.step4.task4.title': '重新配置HDFS',
+  'admin.rm_highAvailability.wizard.step4.task5.title': '开启所有服务',
+  'admin.rm_highAvailability.wizard.step4.notice.inProgress':'请等待ResourceManager HA完成部署。',
+  'admin.rm_highAvailability.wizard.step4.notice.completed':'ResourceManager HA已成功部署。',
 
-  'admin.ra_highAvailability.wizard.header': 'Enable Ranger Admin HA Wizard',
-  'admin.ra_highAvailability.wizard.step1.header': 'Get Started',
-  'admin.ra_highAvailability.wizard.step1.body': 'This wizard will walk you through enabling Ranger Admin HA on your cluster.<br/>' +
-  'Once enabled, you will be running a Standby Ranger Admin in addition to your Active Ranger Admin.<br/>' +
-  'This allows for an Active-Standby Ranger Admin configuration that automatically performs failover.<br/><br/>' +
-  '<b>You should plan a cluster maintenance window and prepare for cluster downtime when enabling Ranger Admin HA.</b><br/><br/>' +
-  'Please setup the load balancer and provide the URL to be used. Make sure that the load balancer is setup properly before proceeding.' +
-  '<br/><br/><div class="alert">Be sure that Ranger Admin and load balancer are located on separate hosts.</div>',
-  'admin.ra_highAvailability.wizard.step1.load_balancer_url': 'URL to load balancer',
-  'admin.ra_highAvailability.wizard.step1.invalid_url': 'Must be valid URL',
-  'admin.ra_highAvailability.wizard.step2.header': 'Select Hosts',
-  'admin.ra_highAvailability.wizard.step2.body': 'Select a host or hosts that will be running the additional Ranger Admin components',
-  'admin.ra_highAvailability.wizard.step2.warning': 'Be sure that load balancer located separately from Ranger Admin components.',
-  'admin.ra_highAvailability.wizard.step3.header': 'Review',
-  'admin.ra_highAvailability.wizard.step3.alert_message': '<b>Confirm your host selections.</b>',
-  'admin.ra_highAvailability.wizard.step3.currentRA': 'Current Ranger Admin',
-  'admin.ra_highAvailability.wizard.step3.additionalRA': 'Additional Ranger Admin',
-  'admin.rm_highAvailability.wizard.step3.configs_changes': '<p><b>Review Configuration Changes.</b></p>' +
-    'The following lists the configuration changes that will be made by the Wizard to enable Ranger Admin HA. ' +
-    'This information is for <b> review only </b> and is not editable.',
-  'admin.ra_highAvailability.wizard.step4.header': 'Install, Start and Test',
-  'admin.ra_highAvailability.wizard.step4.task0.title': 'Stop All Services',
-  'admin.ra_highAvailability.wizard.step4.task1.title': 'Install Additional Ranger Admin',
-  'admin.ra_highAvailability.wizard.step4.task2.title': 'Reconfigure Services',
-  'admin.ra_highAvailability.wizard.step4.task3.title': 'Start All Services',
-  'admin.ra_highAvailability.wizard.step4.notice.inProgress': 'Please wait while Ranger Admin HA is being deployed.',
-  'admin.ra_highAvailability.wizard.step4.notice.completed': 'Ranger Admin HA has been enabled successfully.',
-  'admin.ra_highAvailability.closePopup':'Enable Ranger Admin HA Wizard is in progress. You must allow the wizard to complete for Ambari to be in usable state. ' +
-  'If you choose to quit, you must follow manual instructions to complete or revert enabling Ranger Admin HA as documented in the Ambari User Guide. Are you sure you want to exit the wizard?',
+  'admin.ra_highAvailability.wizard.header': '激活Ranger Admin HA向导',
+  'admin.ra_highAvailability.wizard.step1.header': '开始',
+  'admin.ra_highAvailability.wizard.step1.body': '本向导将引导你激活集群中的Ranger Admin HA。<br/>' +
+  '一旦激活，除开已启用的Ranger Admin外，还有一个待命Ranger Admin也将被启用。<br/>' +
+'它允许配置一个待命启用的Ranger Admin来自动进行故障恢复。<br/><br/>' +
+  '<b>你应当提前打开一个集群维护窗口为当激活Ranger Admin HA时的集群停机做好准备。</b><br/><br/>' +
+  '请部署负载均衡器并提供将要被使用的URL。运行之前确保负载均衡器部署正确。' +
+  '<br/><br/><div class="alert">确保Ranger Admin和负载均衡器位于不同的主机上。</div>',
+  'admin.ra_highAvailability.wizard.step1.load_balancer_url': '加载负载均衡器URL',
+  'admin.ra_highAvailability.wizard.step1.invalid_url': '必须是有效URL',
+  'admin.ra_highAvailability.wizard.step2.header': '选择主机',
+  'admin.ra_highAvailability.wizard.step2.body': '选择将要运行额外Ranger Admin组件的主机',
+  'admin.ra_highAvailability.wizard.step2.warning': '确保负载均衡器和Ranger Admin组件分离。',
+  'admin.ra_highAvailability.wizard.step3.header': '回看',
+  'admin.ra_highAvailability.wizard.step3.alert_message': '<b>确认你的主机选择。</b>',
+  'admin.ra_highAvailability.wizard.step3.currentRA': '当前Ranger Admin',
+  'admin.ra_highAvailability.wizard.step3.additionalRA': '额外Ranger Admin',
+  'admin.rm_highAvailability.wizard.step3.configs_changes': '<p><b>回看配置变更。</b></p>' +
+    '向导将会对下面列出的配置作出变更以激活Ranger Admin HA。' +
+    '该信息<b>只用作回看</b>并且不可进行编辑。',
+  'admin.ra_highAvailability.wizard.step4.header': '部署，启动和测试',
+  'admin.ra_highAvailability.wizard.step4.task0.title': '停用所有服务',
+  'admin.ra_highAvailability.wizard.step4.task1.title': '部署额外Ranger Admin',
+  'admin.ra_highAvailability.wizard.step4.task2.title': '重新配置服务',
+  'admin.ra_highAvailability.wizard.step4.task3.title': '开启所有服务',
+  'admin.ra_highAvailability.wizard.step4.notice.inProgress': '请等待Ranger Admin HA完成部署。',
+  'admin.ra_highAvailability.wizard.step4.notice.completed': 'Ranger Admin HA已激活成功。',
+  'admin.ra_highAvailability.closePopup':'正在进行Ranger Admin HA激活向导。必须完成该向导以使Ambari进入到可用状态。' +
+  '如果选择退出，必须遵照Ambari用户指导中收录的手动方法来完成或者复原Ranger Admin HA的激活。确定退出向导？',
 
-  'admin.security.title':'Kerberos security has not been enabled',
-  'admin.security.enabled': 'Kerberos security is enabled',
-  'admin.security.disabled': 'Kerberos security is disabled',
-  'admin.security.button.enable':'Enable Security',
-  'admin.security.button.disable':'Disable Security',
-  'admin.security.enable.popup.body': 'We will walk you through add security wizard',
-  'admin.security.enable.popup.header': 'Add security',
-  'admin.security.disable.popup.header': 'Remove security',
-  'admin.security.disable.popup.body': 'You are about to disable Kerberos on the cluster. This will stop all the services in your cluster and remove the Kerberos configurations. <strong>Are you sure you wish to proceed with disabling Kerberos?</strong>',
-  'admin.security.step1.header': 'Get Started',
-  'admin.security.step2.header': 'Configure Services',
-  'admin.security.step3.header': 'Create Principals and Keytabs',
-  'admin.security.step4.header': 'Save and Apply Configuration',
-  'admin.security.step1.body.header': 'Important: Before configuring Ambari to manage your Kerberos-enabled cluster, ' +
-    'you must perform the following manual steps on your cluster. Be sure to record the location of the keytab files ' +
-    'for each host and the principals for each Hadoop service. This information is required in order to use the wizard.',
-  'admin.security.step1.body.instruction1': 'Install, configure and start your Kerberos KDC',
-  'admin.security.step1.body.instruction2': 'Install and configure the Kerberos client on every host in the cluster',
-  'admin.security.step1.body.instruction3': 'Create Kerberos principals for Hadoop services and hosts',
-  'admin.security.step1.body.instruction4': 'Generate keytabs for each principal and place on the appropriate hosts',
-  'admin.security.step1.body.instruction5': '<b>Application Timeline Server</b> component of YARN service will be <span class="text-error"><b>deleted</b></span> as part of enabling security in this HDP stack version',
-  'admin.security.step2.body.header': 'Configure Kerberos security properties',
-  'admin.security.step3.notice': 'You need to create Kerberos principals and keytabs before proceeding.<br />'+
-  'Download the CSV file and use it to create a script to generate the principals and keytabs on specified hosts. ' +
-  'Once the principals and keytabs have been created, click on <i>Apply</i> to continue. If you need to make configuration changes, click <i>Back</i>.',
-  'admin.security.step3.table.principal': 'Principal',
+  'admin.security.title':'Kerberos安全认证未被激活',
+  'admin.security.enabled': 'Kerberos安全认证已激活',
+  'admin.security.disabled': 'Kerberos安全认证已禁用',
+  'admin.security.button.enable':'激活安全认证',
+  'admin.security.button.disable':'禁用安全认证',
+  'admin.security.enable.popup.body': '我们将引导你完成安全认证部署',
+  'admin.security.enable.popup.header': '添加安全认证',
+  'admin.security.disable.popup.header': '移除安全认证',
+  'admin.security.disable.popup.body': '你将要禁用集群上的Kerberos。这将导致集群上的所有服务终止并移除Kerberos配置。<strong>你确定继续禁用Kerberos？</strong>',
+  'admin.security.step1.header': '开始',
+  'admin.security.step2.header': '配置服务',
+  'admin.security.step3.header': '创建用户和Keytab',
+  'admin.security.step4.header': '保存并应用配置',
+  'admin.security.step1.body.header': '重要：在配置Ambari来管理激活Kerberos集群之前，' +
+    '你必须在集群上执行下面的手动配置步骤。确保记录下每一个主机以及每一个Hadoop服务的用户对应的keytab文件的位置。' +
+    '为使用向导，本信息是需要的。',
+  'admin.security.step1.body.instruction1': '部署，配置和启用你的Kerberos KDC',
+  'admin.security.step1.body.instruction2': '部署及配置集群中所有主机的Kerberos用户',
+  'admin.security.step1.body.instruction3': '为Hadoop服务和主机创建Kerberos用户',
+  'admin.security.step1.body.instruction4': '为每个用户生成keytab并放置于恰当的主机上',
+  'admin.security.step1.body.instruction5': 'YARN服务的<b>应用时间线服务器</b>组件将会被<span class="text-error"><b>解除</b></span>作为该HDP栈版本下启用安全机制的一部分',
+  'admin.security.step2.body.header': '配置Kerberos安全认证属性',
+  'admin.security.step3.notice': '你需要在继续进行操作之前创建Kerberos用户和keytab。<br />'+
+  '下载CSV文件并使用它创建一个脚本来为指定主机生成用户和keytab。' +
+  '一旦创建了用户和keytab，点击<i>应用</i>以继续。如果需要调整配置，点击<i>返回</i>。',
+  'admin.security.step3.table.principal': '用户',
   'admin.security.step3.table.keytab': 'Keytab',
-  'admin.security.step3.downloadCSV': 'Download CSV',
-  'admin.security.step4.body.header': 'Applying kerberos security to the cluster',
-  'admin.security.step4.body.success.header' : 'Kerberos-based security has been enabled on your cluster. Please wait while services are started in secure mode.',
-  'admin.security.step4.body.failure.header' : 'Failed to enable Kerberos-based security on your cluster. Your cluster will keep running in non-secure mode.',
-  'admin.security.step4.save.configuration.note':'This configuration is created by Enable/Disable security wizard',
-  'admin.security.apply.configuration.error' : 'Failed to apply secure configurations to the cluster. Please navigate to "Configure Services" step and make sure all services are configured with appropriate values.',
-  'admin.security.disable.body.header' : 'Disabling kerberos security on the cluster',
-  'admin.security.disable.body.success.header': 'Kerberos-based security has been disabled on your cluster. Please wait while services are started in non-secure mode.',
-  'admin.security.disable.body.failure.header': 'Failed to disable Kerberos-based security on your cluster. Your cluster will keep running in secure mode.',
-  'admin.security.disable.onClose': 'You are in the process of disabling security on your cluster. ' +
-    'Are you sure you want to quit?',
-  'admin.removeSecurity.header': 'Disable Security',
-  'admin.security.applying.config.header': 'Applying Configurations',
-  'admin.security.applying.config.body':'You cannot quit wizard while configurations are being applied',
-  'admin.security.status.error' : 'Error in retrieving cluster security status from Ambari server',
-  'admin.users.ldapAuthUsed':'LDAP Authentication is being used to authenticate users',
-  'admin.users.delete.yourself.message':'You cannot delete yourself',
-  'admin.users.delete.yourself.header':'Deleting warning',
+  'admin.security.step3.downloadCSV': '下载CSV',
+  'admin.security.step4.body.header': '为集群部署Kerberos安全认证',
+  'admin.security.step4.body.success.header' : '已激活集群上的基于Kerberos的安全认证。请等待服务进入安全模式。',
+  'admin.security.step4.body.failure.header' : '集群上的基于Kerberos的安全认证激活失败。集群将继续处于非安全模式下运行。',
+  'admin.security.step4.save.configuration.note':'本配置由激活/禁用安全认证向导创建',
+  'admin.security.apply.configuration.error' : '集群上的部署安全认证设置失败。请移步“设置服务”步骤并确保所有服务设置属性得当。',
+  'admin.security.disable.body.header' : '禁用集群上的Kerberos安全认证',
+  'admin.security.disable.body.success.header': '已禁用集群上的基于Kerberos的安全认证。请等待服务进入非安全模式。',
+  'admin.security.disable.body.failure.header': '集群上的基于Kerberos的安全认证禁用失败。集群将继续处于安全模式下运行。',
+  'admin.security.disable.onClose': '正在进行集群上安全认证的禁用。' +
+    '确定要退出？',
+  'admin.removeSecurity.header': '禁用安全认证',
+  'admin.security.applying.config.header': '部署配置',
+  'admin.security.applying.config.body':'配置过程中不能退出本向导',
+  'admin.security.status.error' : '从Ambari服务器恢复集群安全状态出错',
+  'admin.users.ldapAuthUsed':'用户认证启用了LDAP认证',
+  'admin.users.delete.yourself.message':'不能删除自己',
+  'admin.users.delete.yourself.header':'删除警告',
 
-  'admin.users.delete.header':'Delete {0}',
+  'admin.users.delete.header':'删除 {0}',
 
-  'admin.users.addButton':'Add Local User',
-  'admin.users.editButton': 'Edit Local User',
-  'admin.users.delete':'delete',
-  'admin.users.edit':'edit',
-  'admin.users.privileges':'Admin',
-  'admin.users.type':'Type',
-  'admin.users.action':'Action',
-  'admin.users.passwordRetype':'Retype Password',
-  'admin.users.username':'Username',
-  'admin.users.createSuccess': 'User successfully created.',
-  'admin.users.createError': 'Error occurred while user creating.',
-  'admin.users.createError.passwordValidation': 'Passwords are different',
-  'admin.users.createError.userNameExists': 'User with the same name is already exists',
-  'admin.users.editError.requiredField': 'This is required',
+  'admin.users.addButton':'添加本地用户',
+  'admin.users.editButton': '编辑本地用户',
+  'admin.users.delete':'删除',
+  'admin.users.edit':'编辑',
+  'admin.users.privileges':'管理员',
+  'admin.users.type':'类型',
+  'admin.users.action':'操作',
+  'admin.users.passwordRetype':'重新输入密码',
+  'admin.users.username':'用户名',
+  'admin.users.createSuccess': '成功创建用户。',
+  'admin.users.createError': '用户创建出错。',
+  'admin.users.createError.passwordValidation': '密码不一致',
+  'admin.users.createError.userNameExists': '已存在同名用户',
+  'admin.users.editError.requiredField': '必填',
 
-  'admin.access.showJobs':'Enable Jobs tab for non-admin users',
+  'admin.access.showJobs':'为非管理员用户启用Jobs tab',
 
-  'admin.confirmUninstall':'Confirm Uninstall',
-  'admin.cluster.stackVersion':'Cluster Stack Version',
-  'admin.cluster.upgradeAvailable':'Upgrade available',
-  'admin.cluster.upgradeUnavailable':'Upgrade unavailable',
-  'admin.cluster.repositories.repositories':'Repositories',
+  'admin.confirmUninstall':'删除确认',
+  'admin.cluster.stackVersion':'集群栈版本',
+  'admin.cluster.upgradeAvailable':'可更新',
+  'admin.cluster.upgradeUnavailable':'不可更新',
+  'admin.cluster.repositories.repositories':'资源库',
   'admin.cluster.repositories.os':'OS',
-  'admin.cluster.repositories.baseUrl':'Base URL',
-  'admin.cluster.repositories.popup.header.success':'Repo Base URLs Saved',
-  'admin.cluster.repositories.popup.header.fail':'Base URL Validation Failed',
-  'admin.cluster.repositories.popup.body.success':'The Repo Base URL has been saved successfully.',
-  'admin.cluster.repositories.popup.body.fail':'The Base URL failed validation and has not been saved.',
-  'admin.cluster.repositories.invalidURLAttention': '<b>Attention:</b> Please make sure all repository URLs are valid before saving.',
-  'admin.cluster.repositories.emptyURLattention':'<b>Attention:</b> Repository URLs are REQUIRED before you can save.',
-  'admin.cluster.repositories.skipValidation.tooltip':'<b>Warning:</b> This is for advanced users only. Use this option if you want to skip validation for Repository Base URLs.',
+  'admin.cluster.repositories.baseUrl':'基准URL',
+  'admin.cluster.repositories.popup.header.success':'保存资源库基准URL',
+  'admin.cluster.repositories.popup.header.fail':'无效基准URL',
+  'admin.cluster.repositories.popup.body.success':'资源库基准URL保存成功。',
+  'admin.cluster.repositories.popup.body.fail':'基准URL无效并且没有进行保存。',
+  'admin.cluster.repositories.invalidURLAttention': '<b>注意：</b>在保存之前请确保所有资源库URL有效。',
+  'admin.cluster.repositories.emptyURLattention':'<b>注意：</b>填写资源库URL后才可进行保存。',
+  'admin.cluster.repositories.skipValidation.tooltip':'<b>警告：</b>仅供高级用户使用。勾选该选项来跳过资源库的基准URL有效验证。',
 
-  'admin.misc.header': 'Service Users and Groups',
-  'admin.misc.nothingToShow': 'No user accounts to display',
+  'admin.misc.header': '服务用户和组',
+  'admin.misc.nothingToShow': '无用户账号可供展示',
 
-  'admin.serviceAutoStart.title': "Service Auto Start",
-  'admin.serviceAutoStart.header': "Service Auto Start Configuration",
-  'admin.serviceAutoStart.header.text': "Ambari services can be configured to start automatically on system boot. Each service can be configured to start all components, masters and workers, or selectively.",
-  'admin.serviceAutoStart.body.text': "Auto-Start Services",
-  'admin.serviceAutoStart.tooltip.text': "{0} components enabled",
+  'admin.serviceAutoStart.title': "自动开启服务",
+  'admin.serviceAutoStart.header': "自动开启服务配置",
+  'admin.serviceAutoStart.header.text': "可以进行设置以自动开启根系统下的Ambari服务。每个服务可设置开启所有组件或者有选择性地开启。",
+  'admin.serviceAutoStart.body.text': "自动开启服务",
+  'admin.serviceAutoStart.tooltip.text': "{0} 激活组件",
 
-  'admin.stackVersions.filter.notInstalled': "Not Installed ({0})",
-  'admin.stackVersions.filter.all': "All ({0})",
-  'admin.stackVersions.filter.upgradeReady': "Upgrade Ready ({0})",
-  'admin.stackVersions.filter.installed': "Installed ({0})",
-  'admin.stackVersions.filter.current': "Current ({0})",
-  'admin.stackVersions.filter.upgrading': "Upgrade/Downgrade In Progress ({0})",
-  'admin.stackVersions.filter.upgraded': "Ready to Finalize ({0})",
-  'admin.stackVersions.upgrade.start.fail.title':'Upgrade could not be started',
-  'admin.stackVersions.upgrade.installPackage.fail.title':'Packages could not be installed',
-  'admin.stackVersions.upgrade.installPackage.fail.timeout':'Request timed out.',
-  'admin.stackVersions.upgrade.installPackage.fail.noAvailableServices':"Version {0} does not contain services that are installed.",
+  'admin.stackVersions.filter.notInstalled': "未安装 ({0})",
+  'admin.stackVersions.filter.all': "全部 ({0})",
+  'admin.stackVersions.filter.upgradeReady': "准备好升级 ({0})",
+  'admin.stackVersions.filter.installed': "已安装 ({0})",
+  'admin.stackVersions.filter.current': "当前 ({0})",
+  'admin.stackVersions.filter.upgrading': "正在进行升级/降级中 ({0})",
+  'admin.stackVersions.filter.upgraded': "准备完成 ({0})",
+  'admin.stackVersions.upgrade.start.fail.title':'不能进行升级',
+  'admin.stackVersions.upgrade.installPackage.fail.title':'包不能被安装',
+  'admin.stackVersions.upgrade.installPackage.fail.timeout':'请求超时。',
+  'admin.stackVersions.upgrade.installPackage.fail.noAvailableServices':"版本 {0} 不包含已安装服务。",
 
-  'admin.stackVersions.upgrade.patch.revert.confirmation':'Are you sure you want to revert the following services:',
+  'admin.stackVersions.upgrade.patch.revert.confirmation':'确定要复原下面的服务？',
 
-  'admin.stackVersions.editRepositories.info': 'Provide Base URLs for the Operating Systems you are configuring. Uncheck all other Operating Systems.',
-  'admin.stackVersions.editRepositories.validation.warning': 'Some of the repositories failed validation. Make changes to the base url or skip validation if you are sure that urls are correct',
-  'admin.stackVersions.version.install.confirm': 'You are about to install packages for version <strong>{0}</strong> on all hosts.',
-  'admin.stackVersions.version.install.patch.confirm': 'You are about to install packages for version <strong>{0}</strong> on hosts which contain the following services:',
-  'admin.stackVersions.version.install.skipDependencies': 'Skip Dependency Check',
-  'admin.stackVersions.version.install.skipDependencies.tooltip': 'When selected, Ambari will not verify that all package dependencies have been satisfied after installing the new stack.',
-  'admin.stackVersions.version.linkTooltip': 'Click to Edit Repositories',
-  'admin.stackVersions.version.hostsTooltip': 'Click to List Hosts',
-  'admin.stackVersions.version.emptyHostsTooltip': 'No Hosts to List',
+  'admin.stackVersions.editRepositories.info': '向当前进行设置的操作系统提供基准URL。不用管所有其他操作系统。',
+  'admin.stackVersions.editRepositories.validation.warning': '部分资源库有效验证失败。请变更基准URL，或者如果确定URL正确可以选择跳过验证',
+  'admin.stackVersions.version.install.confirm': '即将在所有主机上安装版本<strong>{0}</strong>的包。',
+  'admin.stackVersions.version.install.patch.confirm': '即将在包含下列服务的主机上安装版本<strong>{0}</strong>的包：',
+  'admin.stackVersions.version.install.skipDependencies': '跳过依赖检查',
+  'admin.stackVersions.version.install.skipDependencies.tooltip': '当勾选时，完成安装新栈时，Ambari将不会验证所有依赖包是否符合要求。',
+  'admin.stackVersions.version.linkTooltip': '点击以编辑资源库',
+  'admin.stackVersions.version.hostsTooltip': '点击以列出主机',
+  'admin.stackVersions.version.emptyHostsTooltip': '无主机可供展示',
   'admin.stackVersions.version.notInstalled': "未安装",
   'admin.stackVersions.version.hostsInfoTooltip': "There are {0} hosts that do not need packages installed:<li>{1} Maintenance Mode</li><li>{2} Not Required</li>",
   'admin.stackVersions.removeIopSelect': "Remove IOP select",
@@ -1707,7 +1707,7 @@ Em.I18n.translations = {
     ' and go to the <b>Ambari Administration</b> interface. You can return to cluster management by using the' +
     ' “Go to Dashboard” link in the Ambari Administration > Clusters section.',
   'admin.stackVersions.version.installNow': "安装",
-  'admin.stackVersions.version.reinstall': "冲刺呢安装",
+  'admin.stackVersions.version.reinstall': "重新安装",
   'admin.stackVersions.version.performUpgrade': "更新",
   'admin.stackVersions.version.preUpgradeCheck': '更新检查',
   'admin.stackVersions.version.upgrade.pause': "更新组件依赖",
