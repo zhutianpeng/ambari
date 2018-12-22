@@ -2242,201 +2242,203 @@ Em.I18n.translations = {
   'services.service.stop.confirmMsg' : '你正要停止 {0}',
   'services.service.stop.confirmButton': '确认停止',
   'services.service.start.confirmButton' : '确认启动',
-  'services.service.stop.warningMsg.turnOnMM': 'This will generate alerts as the service is stopped. To suppress alerts, turn on Maintenance Mode for {0} prior to stopping.',
-  'services.service.stop.warningMsg.dependent.services': 'Stopping {0} may impair the functioning of its dependent service(s): {1}.',
-  'services.service.restartAll.confirmButton': 'Confirm Restart All',
-  'services.service.restartAll.confirmMsg': 'You are about to restart {0}',
-  'services.service.restartAll.warningMsg.turnOnMM': 'This will trigger alerts as the service is restarted. To suppress alerts, turn on Maintenance Mode for {0} prior to running restart all',
-  'services.service.stop.HDFS.warningMsg.checkPointNA': 'Could not determine the age of the last HDFS checkpoint. Please ensure that you have a recent checkpoint. Otherwise, the NameNode(s) can take a very long time to start up.',
+  'services.service.stop.warningMsg.turnOnMM': '这将在服务停止时生成警报。若要禁止警报，请在停止之前打开{0}的维护模式。',
+  'services.service.stop.warningMsg.dependent.services': '停止{0}可能损害其从属服务的功能：{1}。',
+  'services.service.restartAll.confirmButton': '确认要全部重启',
+  'services.service.restartAll.confirmMsg': '你正要重启服务：{0}',
+  'services.service.restartAll.warningMsg.turnOnMM': '这将在重新启动服务时触发警报。若要抑制警报，请在运行重新启动所有警报之前打开{0}的维护模式',
+  'services.service.stop.HDFS.warningMsg.checkPointNA': '无法确定上一个HDFS检查点的年龄。请确保您最近有一个检查站。否则，NameNode可能需要很长时间才能启动。',
+
   'services.service.stop.HDFS.warningMsg.checkPointTooOld.instructions':
     '<br><ol>' +
-    '<li>Login to the NameNode host <b>{0}</b>.</li>' +
-    '<li>Put the NameNode in Safe Mode (read-only mode):' +
+    '<li>登录到NameNode主机 <b>{0}</b>.</li>' +
+    '<li>将命名节点置于安全模式 (只读模式):' +
     '<div class="code-snippet">sudo su {1} -l -c \'hdfs dfsadmin -safemode enter\'</div></li>' +
-    '<li>Once in Safe Mode, create a Checkpoint:' +
+    '<li>一旦进入安全模式，创建一个检查点：' +
     '<div class="code-snippet">sudo su {1} -l -c \'hdfs dfsadmin -saveNamespace\'</div></li>' +
     '</ol>',
-  'services.service.stop.HDFS.warningMsg.checkPointTooOld': 'The last HDFS checkpoint is older than {0} hours. Make sure that you have taken a checkpoint before proceeding. Otherwise, the NameNode(s) can take a very long time to start up.',
-  'services.service.config_groups_popup.header':'Manage {0} Configuration Groups',
-  'services.service.config_groups_popup.notice':'You can apply different sets of {{serviceName}} configurations to groups of hosts by managing {{serviceName}} Configuration Groups and their host membership.  Hosts belonging to a {{serviceName}} Configuration Group have the same set of configurations for {{serviceName}}. Each host belongs to one {{serviceName}} Configuration Group.',
-  'services.service.config_groups_popup.rename':'Rename',
-  'services.service.config_groups_popup.duplicate':'Duplicate',
-  'services.service.config_groups_popup.group_name_lable':'Name',
-  'services.service.config_groups_popup.group_desc_lable':'Description',
-  'services.service.config_groups_popup.properties':'Properties',
-  'services.service.config_groups_popup.addButton':'Create new Configuration Group',
-  'services.service.config_groups_popup.removeButton':'Delete Configuration Group',
-  'services.service.config_groups_popup.renameButton':'Rename Configuration Group',
-  'services.service.config_groups_popup.addHost':'Add hosts to selected Configuration Group',
-  'services.service.config_groups_popup.addHostDisabled':'There are no available hosts to add.',
-  'services.service.config_groups_popup.removeHost':'Remove hosts from selected Configuration Group',
-  'services.service.config_groups_popup.duplicateButton':'Duplicate Configuration Group',
-  'services.service.config_groups.add_config_group_popup.header':'Create New Configuration Group',
-  'services.service.config_groups.duplicate_config_group_popup.header':'Duplicate Configuration Group',
-  'services.service.config_groups.rename_config_group_popup.header':'Rename Configuration Group',
-  'services.service.config_groups.switchGroupTextFull':'Switch to \'{0}\' host config group',
-  'services.service.config_groups.switchGroupTextShort':'Switch to \'{0}\'',
-  'services.reassign.closePopup':'Move {0} wizard is in progress. You must allow the wizard to complete for Ambari to be in usable state. If you choose to quit, you must follow manual instructions to complete or revert move {0} wizard as documented in the Ambari User Guide. Are you sure you want to exit the wizard?',
-  'services.reassign.error.fewHosts':'You must have at least 2 hosts in your cluster to run Move Wizard.',
+  'services.service.stop.HDFS.warningMsg.checkPointTooOld': '最后一个HDFS检查点比{0}小时老。在继续之前，请确保您已经采取了检查点。否则，NameNode可能需要很长时间才能启动。',
 
-  'services.reassign.step1.header':'Get Started',
-  'services.reassign.step1.message1': 'This wizard will walk you through moving {0}.<br/>',
-  'services.reassign.step1.message2': 'The process to reassign {0} involves a combination of <b>automated steps</b> (that will be handled by the wizard) and ' +
-      '<b>manual steps</b> (that you must perform in sequence as instructed by the wizard).<br/><br/>',
-  'services.reassign.step1.message3': '<br/><p class="restart-services-alert">Following services will be restarted as part of the wizard: <b>{0}</b>. You should plan a cluster maintenance window and prepare ' +
-    'for cluster downtime when moving {1}.</p>',
+  'services.service.config_groups_popup.header':'管理{0}配置组',
+  'services.service.config_groups_popup.notice':'可以通过管理{{serviceName}}配置组及其主机成员资格来向主机组应用不同的{{serviceName}}配置集。属于{{serviceName}}配置组的主机具有与{{serviceName}}相同的一组配置。每个主机都属于一个{{serviceName}}配置组。',
+  'services.service.config_groups_popup.rename':'重命名',
+  'services.service.config_groups_popup.duplicate':'复制',
+  'services.service.config_groups_popup.group_name_lable':'名字',
+  'services.service.config_groups_popup.group_desc_lable':'描述',
+  'services.service.config_groups_popup.properties':'性质',
+  'services.service.config_groups_popup.addButton':'创建新的配置组',
+  'services.service.config_groups_popup.removeButton':'删除配置组',
+  'services.service.config_groups_popup.renameButton':'重命名配置组',
+  'services.service.config_groups_popup.addHost':'将主机添加到选定的配置组',
+  'services.service.config_groups_popup.addHostDisabled':'没有可用的主机可以添加',
+  'services.service.config_groups_popup.removeHost':'从选定的配置组中删除主机',
+  'services.service.config_groups_popup.duplicateButton':'重复配置组',
+  'services.service.config_groups.add_config_group_popup.header':'创建新配置组',
+  'services.service.config_groups.duplicate_config_group_popup.header':'重复配置组',
+  'services.service.config_groups.rename_config_group_popup.header':'重命名配置组',
+  'services.service.config_groups.switchGroupTextFull':'切换为 \'{0}\' 主机配置组',
+  'services.service.config_groups.switchGroupTextShort':'切换至 \'{0}\'',
+  'services.reassign.closePopup':'移动{0}向导正在进行中。必须允许向导完成才能使Ambari处于可用状态。如果选择退出，必须按照手动说明完成或恢复移动{0}向导，如Ambari用户指南中所述。您确定要退出向导吗？',
+  'services.reassign.error.fewHosts':'必须在集群中至少有2个主机才能运行移动向导。',
 
-  'services.reassign.step2.header':'Assign Master',
+  'services.reassign.step1.header':'开始吧！',
+  'services.reassign.step1.message1': '这个向导将带领您完成操作 {0}.<br/>',
+  'services.reassign.step1.message2': '重新分配{0}的过程包括<b>自动步骤</b>（将由向导处理）和 ' +
+      '<b>手动步骤</b>（必须按照向导的指示顺序执行）。<br/><br/>',
+  'services.reassign.step1.message3': '<br/><p class="restart-services-alert">以下服务将作为向导的一部分重新启动：<b>{0}</b>。您应该计划一个集群维护窗口并做好准备 ' +
+    '在移动时用于集群停机 {1}.</p>',
+
+  'services.reassign.step2.header':'分配 Master',
   'services.reassign.step2.currentHost':'Current:',
-  'services.reassign.step2.body':'Assign {0} to new host.',
-  'services.reassign.step2.body.namenodeHA':'Move {0} to new host. You can move only one master component at a time.',
-  'services.reassign.step3.header':'Review',
-  'services.reassign.step3.body':'<b>Confirm your host selections.</b>',
-  'services.reassign.step3.targetHost':'Target Host:',
-  'services.reassign.step3.sourceHost':'Source Host:',
-  'services.reassign.step3.component':'Component name:',
+  'services.reassign.step2.body':'把 {0} 分配给新节点。',
+  'services.reassign.step2.body.namenodeHA':'将{0}移动到新主机。一次只能移动一个主组件。',
+  'services.reassign.step3.header':'回顾',
+  'services.reassign.step3.body':'<b>确认您的主机选择.</b>',
+  'services.reassign.step3.targetHost':'目标 Host:',
+  'services.reassign.step3.sourceHost':'源 Host:',
+  'services.reassign.step3.component':'组件名:',
   'services.reassign.step3.configs':'<div class="alert alert-info">' +
-    '<p><b>Review Configuration Changes.</b></p>The Wizard will make the following configuration changes.</div>',
-  'services.reassign.step4.header':'Configure Component',
+    '<p><b>检查配置更改.</b></p>向导将做出以下配置更改。</div>',
+  'services.reassign.step4.header':'配置组件',
 
-  'services.reassign.step4.tasks.stopRequiredServices.title':'Stop Required Services',
-  'services.reassign.step4.tasks.createHostComponents.title':'Create {0}',
-  'services.reassign.step4.tasks.putHostComponentsInMaintenanceMode.title':'Disable {0}',
-  'services.reassign.step4.tasks.reconfigure.title':'Reconfigure {0}',
-  'services.reassign.step4.tasks.save.configuration.note':'This configuration is created by Move {0} wizard',
-  'services.reassign.step4.tasks.installHostComponents.title':'Install {0}',
-  'services.reassign.step4.tasks.startZooKeeperServers.title':'Start ZooKeeper Servers',
-  'services.reassign.step4.tasks.startNameNode.title':'Start NameNode',
-  'services.reassign.step4.tasks.stopHostComponentsInMaintenanceMode.title':'Stop {0}',
-  'services.reassign.step4.tasks.deleteHostComponents.title':'Delete disabled {0}',
-  'services.reassign.step4.tasks.startRequiredServices.title':'Start Required Services',
-  'services.reassign.step4.tasks.cleanMySqlServer.title':'Clean MYSQL Server',
-  'services.reassign.step4.tasks.testHiveMysqlConnection.title':'Test MYSQL Connection',
-  'services.reassign.step4.tasks.configureMySqlServer.title':'Configure MYSQL Server',
-  'services.reassign.step4.tasks.startMySqlServer.title':'Start MYSQL Server',
-  'services.reassign.step4.tasks.restartMySqlServer.title':'Restart MYSQL Server',
-  'services.reassign.step4.tasks.startServices.title':'Start Services',
-  'services.reassign.step4.tasks.testDBConnection.title':'Test DB Connection',
-  'services.reassign.step4.tasks.testDBConnection.tooltip':'Database Host: {0}\n' +
-  'Database Type: {1}\n' +
-  'Database Name: {2}\n' +
-  'Username: {3}\n' +
-  'Password: {4}\n' +
-  'JDBC Driver Class: {5}\n' +
-  'Database URL: {6}',
-  'services.reassign.rollback.confirm':'Are you sure?',
+  'services.reassign.step4.tasks.stopRequiredServices.title':'停止所需服务',
+  'services.reassign.step4.tasks.createHostComponents.title':'新建 {0}',
+  'services.reassign.step4.tasks.putHostComponentsInMaintenanceMode.title':'禁用 {0}',
+  'services.reassign.step4.tasks.reconfigure.title':'重新配置 {0}',
+  'services.reassign.step4.tasks.save.configuration.note':'此配置由 {0}向导创建',
+  'services.reassign.step4.tasks.installHostComponents.title':'安装 {0}',
+  'services.reassign.step4.tasks.startZooKeeperServers.title':'启动 ZooKeeper Servers',
+  'services.reassign.step4.tasks.startNameNode.title':'启动 NameNode',
+  'services.reassign.step4.tasks.stopHostComponentsInMaintenanceMode.title':'停止 {0}',
+  'services.reassign.step4.tasks.deleteHostComponents.title':'删除禁用{0}',
+  'services.reassign.step4.tasks.startRequiredServices.title':'启动所需服务',
+  'services.reassign.step4.tasks.cleanMySqlServer.title':'清理MYSQL的server',
+  'services.reassign.step4.tasks.testHiveMysqlConnection.title':'测试 MYSQL 的连接',
+  'services.reassign.step4.tasks.configureMySqlServer.title':'配置MYSQL的Server',
+  'services.reassign.step4.tasks.startMySqlServer.title':'开启MYSQL的Server',
+  'services.reassign.step4.tasks.restartMySqlServer.title':'重启MYSQL的Server',
+  'services.reassign.step4.tasks.startServices.title':'开启服务',
+  'services.reassign.step4.tasks.testDBConnection.title':'测试数据库的连接',
+  'services.reassign.step4.tasks.testDBConnection.tooltip':'数据库主机: {0}\n' +
+  '数据库类型: {1}\n' +
+  '数据块名称: {2}\n' +
+  '用户名: {3}\n' +
+  '密码: {4}\n' +
+  'JDBC驱动类: {5}\n' +
+  '数据库的URL: {6}',
+  'services.reassign.rollback.confirm':'确定么?',
 
 
-  'services.reassign.step4.task0.title':'Stop Required Services',
-  'services.reassign.step4.task1.title':'Create {0}',
-  'services.reassign.step4.task2.title':'Disable {0}',
-  'services.reassign.step4.task3.title':'Reconfigure {0}',
-  'services.reassign.step4.save.configuration.note':'This configuration is created by Move {0} wizard',
-  'services.reassign.step4.task4.title':'Install {0}',
-  'services.reassign.step4.task5.title':'Start ZooKeeper Servers',
-  'services.reassign.step4.task6.title':'Start NameNode',
-  'services.reassign.step4.task7.title':'Delete disabled {0}',
-  'services.reassign.step4.task8.title':'Start Required Services',
-  'services.reassign.step4.tasks.startNewMySqlServer.title':'Start New MYSQL Server',
-  'services.reassign.step4.status.success': 'Successfully moved <b>{0}</b> from <b>{1}</b> host to <b>{2}</b> host',
-  'services.reassign.step4.status.success.withManualSteps': 'Proceed to the next step',
-  'services.reassign.step4.status.failed': 'Failed to move <b>{0}</b> from <b>{1}</b> host to <b>{2}</b> host',
-  'services.reassign.step4.status.info': 'Reassigning {0}. \nPlease wait for all tasks to be completed.',
-  'services.reassign.step4.retry': 'You can click on the Retry or Abort button to retry failed task or abort changes',
-  'services.reassign.step4.abortError': 'Error in aborting changes.',
-  'services.reassign.step5.header': 'Manual commands',
+  'services.reassign.step4.task0.title':'停止所需的服务',
+  'services.reassign.step4.task1.title':'新建 {0}',
+  'services.reassign.step4.task2.title':'关闭 {0}',
+  'services.reassign.step4.task3.title':'重新配置 {0}',
+  'services.reassign.step4.save.configuration.note':'此配置由移动{0}向导创建',
+  'services.reassign.step4.task4.title':'安装 {0}',
+  'services.reassign.step4.task5.title':'启动ZooKeeper服务器',
+  'services.reassign.step4.task6.title':'开启 NameNode',
+  'services.reassign.step4.task7.title':'删除禁用{0}',
+  'services.reassign.step4.task8.title':'启动所需服务',
+  'services.reassign.step4.tasks.startNewMySqlServer.title':'启动新的MYSQL服务器',
+  'services.reassign.step4.status.success': '成功地将<b>{0}</b>从<b>{1}</b>主机移动到<b>{2}</b>主机',
+  'services.reassign.step4.status.success.withManualSteps': '继续下一步',
+  'services.reassign.step4.status.failed': '未能将<b>{0}</b>从<b>{1}</b>主机移动到<b>{2}</b>主机',
+  'services.reassign.step4.status.info': '重赋值 {0}. \n 请等待所有任务完成.',
+  'services.reassign.step4.retry': '可以单击重试或中止按钮重试失败的任务或中止更改',
+  'services.reassign.step4.abortError': '中止更改中的错误.',
+  'services.reassign.step5.header': '手动命令',
   'services.reassign.step5.body.namenode':
       '<div class="alert alert-info">' +
       '<ol>' +
-      '<li>Copy the contents of <b>{0}</b> on the source host <b>{1}</b> to <b>{0}</b> on the target host <b>{2}</b>.</li>' +
-      '<li>Login to the target host <b>{2}</b> and change permissions for the NameNode dirs by running:' +
+      '<li>将源主机<b>{0}</b>上的<b>{1}</b>的内容复制到目标主机<b>{0}</b>上的<b>{2}</b>。</li>' +
+      '<li>登录到目标主机<b>{2}</b>，并通过运行:' +
       '<div class="code-snippet">chown -R {3}:{5} {6}</div></li>' +
-      '<li>Create marker directory by running:' +
+      '<li>通过运行:' +
       '<div class="code-snippet">mkdir -p /var/lib/hdfs/namenode/formatted</div></li>' +
       '</ol>' +
       '</div>',
   'services.reassign.step5.body.namenode_ha':
       '<div class="alert alert-info">' +
       '<ol>' +
-      '<li>Login to the NameNode host <b>{4}</b>.</li>' +
-      '<li>Reset automatic failover information in ZooKeeper by running:' +
+      '<li>登录到NameNode主机 <b>{4}</b>.</li>' +
+      '<li>通过运行，重置ZooKeeper中的自动故障转移信息:' +
       '<div class="code-snippet">sudo su {3} -l -c \'hdfs zkfc -formatZK\'</div></li>' +
       '</ol>' +
       '</div>' +
       '<div class="alert alert-info">' +
       '<ol start="3">' +
-      '<li>Login to the newly installed NameNode host <b>{2}</b>.<br>' +
-      '<div class="alert alert-warn"><strong>Important!</strong> Be sure to login to the newly installed NameNode host.<br>This is a different host from the Steps 1 and 2 above.</div>' +
+      '<li>登录到新安装的NameNode主机 <b>{2}</b>.<br>' +
+      '<div class="alert alert-warn"><strong>Important!</strong>确保登录到新安装的NameNode主机。<br>这是与上述步骤1和2不同的主机。</div>' +
       '</li>' +
-      '<li>Initialize the metadata by running:' +
+      '<li>通过运行:' +
       "<div class='code-snippet'>sudo su {3} -l -c 'hdfs namenode -bootstrapStandby'</div></li>" +
       '</ol>' +
       '</div>',
   'services.reassign.step5.body.secondary_namenode':
       '<div class="alert alert-info">' +
       '<ol>' +
-      '<li>Copy the contents of <b>{0}</b> on the source host <b>{1}</b> to <b>{0}</b> on the target host <b>{2}</b>.</li>' +
-      '<li>Login to the target host <b>{2}</b> and change permissions for the SNameNode dirs by running:' +
+      '<li>将源主机<b>{0}</b>上的<b>{1}</b>的内容复制到目标主机<b>{0}</b>上的<b>{2}</b>。</li>' +
+      '<li>登录到目标主机<b>{2}</b>，并通过运行：' +
       '<div class="code-snippet">chown -R {3}:{5} {6}</div></li>' +
       '</ol>' +
       '</div>',
   'services.reassign.step5.body.oozie_server':
     '<div class="alert alert-info">' +
     '<ol>' +
-    '<li>On <b>{1}</b> copy the contents of' +
+    '<li>On <b>{1}</b>复制' +
     '<div class="code-snippet"><b>/hadoop/oozie/data/oozie-db</b></div></li>' +
-    '<li>To the target host <b>{2}</b></li>' +
-    '<li>If the directory doesn\'t exists you can create by running' +
+    '<li>到目标主机 <b>{2}</b></li>' +
+    '<li>如果目录不存在，可以通过运行' +
     '<div class="code-snippet">mkdir -p /hadoop/oozie/data/oozie-db</div></li>' +
-    '<li>Update directory permissions by running' +
+    '<li>通过运行' +
     '<div class="code-snippet">chown -R oozie:{5} /hadoop/oozie/data</div></li>' +
     '</ol>' +
     '</div>',
   'services.reassign.step5.body.mysql_server':
     '<div class="alert alert-info">' +
     '<ol>' +
-    '<li>On <b>{1}</b> using a terminal you can export your Metastore DB (MYSQL) using:' +
+    '<li>在<b>{1}</b>上使用终端，可以使用以下命令导出Metastore DB(MYSQL)：' +
     '<div class="code-snippet">mysqldump db_name > backup-file.sql</div></li>' +
-    '<li>Copy the file to the target host <b>{2}</b> hosting the MySQL DB</li>' +
-    '<li>Execute this SQL inside <b>mysql<b>' +
+    '<li>将文件复制到承载MySQL DB的目标主机<b>{2}</b>。</li>' +
+    '<li>在<b>mysql<b>里执行这个SQL' +
     '<div class="code-snippet">CREATE DATABASE db_name;</div></li>' +
-    '<li>Import the database using' +
+    '<li>导入数据库，用下面这句话' +
     '<div class="code-snippet">mysql db_name < backup-file.sql</div></li>' +
     '</ol>' +
     '</div>',
   'services.reassign.step5.body.app_timeline_server': '<div class="alert alert-info">' +
   '<ol>' +
-  '<li>Copy <b>{7}/{8}</b> from the source host <b>{1}</b> to <b>{7}/{8}</b> on the target host <b>{2}</b>.</li>' +
-  '<li>Login to the target host <b>{2}</b> and change permissions by running:' +
+  '<li>在目标主机<b>{2}</b>上从源主机<b>{1}</b>复制<b>{7}/{8}</b>。</li>' +
+  '<li>登录到目标主机<b>{2}</b>，并通过运行：' +
   '<div class="code-snippet">chown -R {3}:{5} {7}/{8}</div></li>' +
   '<div class="code-snippet">chmod -R 700 {7}/{8}</div></li>' +
   '</ol>' +
   '</div>',
-  'services.reassign.step5.body.securityNotice': '<div class="alert alert-info"> <div class="alert alert-warn"> <strong>Note: </strong> Secure cluster' +
-    ' requires generating necessary principals for reassigned component and creating keytab files with the principal on ' +
-    'the target host. The keytab file should be accessible to the service user.</div> {0} </div>',
-  'services.reassign.step5.body.securityConfigsList': 'Create keytab file <b>{0}</b> with principal <b>{1}</b> on <b>{2}</b> host.',
-  'services.reassign.step5.body.proceedMsg': 'Please proceed once you have completed the steps above',
-  'services.reassign.step5.confirmPopup.body': 'Please confirm that you have run the manual steps before continuing.',
-  'services.reassign.step6.header': 'Start and Test services',
-  'services.reassign.step6.tasks.putHostComponentsInMaintenanceMode.title':'Disable {0}',
-  'services.reassign.step6.tasks.deleteHostComponents.title': 'Delete disabled {0}',
-  'services.reassign.step6.tasks.startAllServices.title': 'Start All Services',
-  'services.reassign.step6.tasks.installPxf.title': 'Install PXF on NameNode',
-  'services.reassign.step6.tasks.stopMysqlService.title': 'Stop Mysql Server',
-  'services.reassign.step6.tasks.stopHostComponentsInMaintenanceMode.title': 'Stop {0}',
-  'services.reassign.step6.tasks.startDatanodes.title': 'Start DataNodes',
-  'services.reassign.step6.status.success': 'Successfully moved <b>{0}</b> from <b>{1}</b> host to <b>{2}</b> host.',
-  'services.reassign.step6.status.failed': 'Failed to move <b>{0}</b> from <b>{1}</b> host to <b>{2}</b> host.',
-  'services.reassign.step6.status.info': 'Reassigning {0}. \nPlease wait for all tasks to be completed.',
-  'services.reassign.step7.header': 'Rollback',
-  'services.reassign.step7.info': 'Rollback in progress',
-  'services.reassign.step7.failed': 'Rollback failed',
-  'services.reassign.step7.success': 'Rollback successfully completed',
+  'services.reassign.step5.body.securityNotice': '<div class="alert alert-info"> <div class="alert alert-warn"> <strong>Note: </strong> 安全集群' +
+    ' 需要为重新分配的组件生成必要的主体，并创建具有以下主体的keytab文件 ' +
+    '目标主机。服务用户可以访问keytab文件。</div> {0} </div>',
+  'services.reassign.step5.body.securityConfigsList': '在<b>{2}</b>主机上用主体<b>{1}</b>创建keytab文件<b>{0}</b>。',
+  'services.reassign.step5.body.proceedMsg': '完成以上步骤后，请继续进行',
+  'services.reassign.step5.confirmPopup.body': '在继续之前，请确认您已经运行了手动步骤。',
+  'services.reassign.step6.header': '启动和测试服务',
+  'services.reassign.step6.tasks.putHostComponentsInMaintenanceMode.title':'禁用 {0}',
+  'services.reassign.step6.tasks.deleteHostComponents.title': '删除禁用 {0}',
+  'services.reassign.step6.tasks.startAllServices.title': '开启所有服务',
+  'services.reassign.step6.tasks.installPxf.title': '在NameNode上安装PXF',
+  'services.reassign.step6.tasks.stopMysqlService.title': '停止Mysql服务器',
+  'services.reassign.step6.tasks.stopHostComponentsInMaintenanceMode.title': '停止 {0}',
+  'services.reassign.step6.tasks.startDatanodes.title': '开启 DataNodes',
+  'services.reassign.step6.status.success': '成功地将<b>{0}</b>从<b>{1}</b>主机移动到<b>{2}</b>主机。',
+  'services.reassign.step6.status.failed': '未能将<b>{0}</b>从<b>{1}</b>主机移动到<b>{2}</b>主机。',
+  'services.reassign.step6.status.info': '重新分配{0}。 \n 请等待所有任务完成.',
+  'services.reassign.step7.header': '回滚',
+  'services.reassign.step7.info': '正在进行回滚',
+  'services.reassign.step7.failed': '回滚失败',
+  'services.reassign.step7.success': '回滚成功完成',
 
   /** services page constants **/
 
-  'service.hbase.activeMaster': 'Active Master',
+  'service.hbase.activeMaster': '激活 Master',
 
   'services.hive.client': 'Hive Client',
   'services.hive.clients': 'Hive Clients',
@@ -2451,18 +2453,18 @@ Em.I18n.translations = {
   'services.ganglia.webUi': 'Ganglia Web UI',
   'services.ganglia.monitors': 'Ganglia Monitors',
 
-  'services.mapreduce2.webUi': 'History Server UI',
+  'services.mapreduce2.webUi': '历史 Server UI',
 
   'services.zookeeper.prefix': '{0} of',
   'services.zookeeper.title': '{0} ZooKeepers',
-  'services.zookeeper.postfix': 'running',
+  'services.zookeeper.postfix': '运行中',
   'services.zookeeper.clients': 'ZooKeeper Clients',
   'services.zookeeper.client': 'ZooKeeper Client',
 
-  'services.mapreduce2.history.running': 'History server is running',
-  'services.mapreduce2.history.stopped': 'History server is stopped',
-  'services.mapreduce2.history.unknown': 'History server status is unknown',
-  'services.mapreduce2.smokeTest.requirement': 'MapReduce2 smoke test requires YARN service be started',
+  'services.mapreduce2.history.running': '历史服务器正在运行',
+  'services.mapreduce2.history.stopped': '历史服务器已经停止',
+  'services.mapreduce2.history.unknown': '历史服务器处于未知状态',
+  'services.mapreduce2.smokeTest.requirement': 'MapReduce2烟雾测试要求启动YARN服务',
 
   'services.tez.client': 'Tez client',
   'services.tez.clients': 'Tez clients',
@@ -2473,236 +2475,238 @@ Em.I18n.translations = {
   'services.sqoop.client': 'Sqoop client',
   'services.sqoop.clients': 'Sqoop clients',
 
-  'services.hbase.master.error':'None of the HBase masters is active',
+  'services.hbase.master.error':'没有一个HBase master 是处于激活状态的',
 
-  'alerts.actions.manage_alert_groups_popup.header':'Manage Alert Groups',
-  'alerts.actions.manage_alert_groups_popup.notice':'You can manage alert groups for each service in this dialog. View the list of alert groups and the alert definitions configured in them. ' +
-    'You can also add/remove alert definitions, and pick notification for that alert group.',
-  'alerts.actions.manage_alert_groups_popup.rename':'Rename',
-  'alerts.actions.manage_alert_groups_popup.duplicate':'Duplicate',
-  'alerts.actions.manage_alert_groups_popup.group_name_lable':'Name',
-  'alerts.actions.manage_alert_groups_popup.group_desc_lable':'Description',
-  'alerts.actions.manage_alert_groups_popup.notifications':'Notifications',
-  'alerts.actions.manage_alert_groups_popup.addButton':'Create Alert Group',
-  'alerts.actions.manage_alert_groups_popup.addGroup.exist': 'Alert Group with given name already exists',
-  'alerts.actions.manage_alert_groups_popup.removeButton':'Delete Alert Group',
-  'alerts.actions.manage_alert_groups_popup.removeButtonDisabled':'Cannot delete default alert group',
-  'alerts.actions.manage_alert_groups_popup.renameButton':'Rename Alert Group',
-  'alerts.actions.manage_alert_groups_popup.duplicateButton':'Duplicate Alert Group',
-  'alerts.actions.manage_alert_groups_popup.addDefinition.noDefinitions':'No alert definitions to display',
-  'alerts.actions.manage_alert_groups_popup.addDefinition':'Add alert definitions to selected Alert Group',
-  'alerts.actions.manage_alert_groups_popup.addDefinitionDisabled':'There are no available alert definitions to add',
-  'alerts.actions.manage_alert_groups_popup.addDefinitionToDefault': 'Cannot modify default alert group',
-  'alerts.actions.manage_alert_groups_popup.removeDefinition':'Remove alert definitions from selected Alert Group',
-  'alerts.actions.manage_alert_groups_popup.removeDefinitionDisabled':'Cannot modify default alert group',
-  'alerts.actions.manage_alert_groups_popup.selectDefsDialog.title': 'Select Alert Group Definitions',
-  'alerts.actions.manage_alert_groups_popup.selectDefsDialog.message': 'Select alert definitions to be added to this "{0}" Alert Group.',
-  'alerts.actions.manage_alert_groups_popup.selectDefsDialog.filter.placeHolder': 'All',
-  'alerts.actions.manage_alert_groups_popup.selectDefsDialog.selectedDefsLink': '{0} out of {1} alert definitions selected',
-  'alerts.actions.manage_alert_groups_popup.selectDefsDialog.message.warning': 'At least one alert definition needs to be selected.',
+  'alerts.actions.manage_alert_groups_popup.header':'管理警报组',
+  'alerts.actions.manage_alert_groups_popup.notice':'可以在此对话框中为每个服务管理警报组。查看警报组的列表和其中配置的警报定义。 ' +
+    '您还可以添加/删除警报定义，并为该警报组选择通知。',
+  'alerts.actions.manage_alert_groups_popup.rename':'重命名',
+  'alerts.actions.manage_alert_groups_popup.duplicate':'复制',
+  'alerts.actions.manage_alert_groups_popup.group_name_lable':'名称',
+  'alerts.actions.manage_alert_groups_popup.group_desc_lable':'描述',
+  'alerts.actions.manage_alert_groups_popup.notifications':'通知',
+  'alerts.actions.manage_alert_groups_popup.addButton':'创建警报组',
+  'alerts.actions.manage_alert_groups_popup.addGroup.exist': '具有给定名称的警报组已经存在',
+  'alerts.actions.manage_alert_groups_popup.removeButton':'删除警报组',
+  'alerts.actions.manage_alert_groups_popup.removeButtonDisabled':'无法删除默认警报组',
+  'alerts.actions.manage_alert_groups_popup.renameButton':'重命名警报组',
+  'alerts.actions.manage_alert_groups_popup.duplicateButton':'重复警报组',
+  'alerts.actions.manage_alert_groups_popup.addDefinition.noDefinitions':'没有要显示的警报定义',
+  'alerts.actions.manage_alert_groups_popup.addDefinition':'向选定的警报组添加警报定义',
+  'alerts.actions.manage_alert_groups_popup.addDefinitionDisabled':'没有可用的警报定义可以添加',
+  'alerts.actions.manage_alert_groups_popup.addDefinitionToDefault': '无法修改默认警报组',
+  'alerts.actions.manage_alert_groups_popup.removeDefinition':'从选定的警报组中删除警报定义',
+  'alerts.actions.manage_alert_groups_popup.removeDefinitionDisabled':'无法修改默认警报组',
+  'alerts.actions.manage_alert_groups_popup.selectDefsDialog.title': '选择警报组定义',
+  'alerts.actions.manage_alert_groups_popup.selectDefsDialog.message': '选择要添加到此“{0}”警报组的警报定义。',
+  'alerts.actions.manage_alert_groups_popup.selectDefsDialog.filter.placeHolder': '所有',
+  'alerts.actions.manage_alert_groups_popup.selectDefsDialog.selectedDefsLink': '{0}选中{1}中的警报定义',
+  'alerts.actions.manage_alert_groups_popup.selectDefsDialog.message.warning': '需要选择至少一个警报定义。',
 
-  'alerts.actions.manage_alert_notifications_popup.header':'Manage Alert Notifications',
-  'alerts.actions.manage_alert_notifications_popup.noAlertNotification':'No alert notifications defined',
-  'alerts.actions.manage_alert_notifications_popup.addButton':'Create new Alert Notification',
-  'alerts.actions.manage_alert_notifications_popup.addHeader':'Create Alert Notification',
-  'alerts.actions.manage_alert_notifications_popup.removeButton':'Delete Alert Notification',
-  'alerts.actions.manage_alert_notifications_popup.editButton':'Edit Alert Notification',
-  'alerts.actions.manage_alert_notifications_popup.editHeader':'Edit Notification',
-  'alerts.actions.manage_alert_notifications_popup.duplicateButton':'Duplicate Alert Notification',
-  'alerts.actions.manage_alert_notifications_popup.method':'Method',
-  'alerts.actions.manage_alert_notifications_popup.email':'Email To',
-  'alerts.actions.manage_alert_notifications_popup.SMTPServer':'SMTP Server',
-  'alerts.actions.manage_alert_notifications_popup.SMTPPort':'SMTP Port',
-  'alerts.actions.manage_alert_notifications_popup.SMTPUseAuthentication':'Use authentication',
-  'alerts.actions.manage_alert_notifications_popup.SMTPUsername':'Username',
-  'alerts.actions.manage_alert_notifications_popup.SMTPPassword':'Password',
-  'alerts.actions.manage_alert_notifications_popup.retypeSMTPPassword':'Password Confirmation',
-  'alerts.actions.manage_alert_notifications_popup.SMTPSTARTTLS':'Start TLS',
-  'alerts.actions.manage_alert_notifications_popup.emailFrom':'Email From',
-  'alerts.actions.manage_alert_notifications_popup.version':'Version',
+  'alerts.actions.manage_alert_notifications_popup.header':'管理警报通知',
+  'alerts.actions.manage_alert_notifications_popup.noAlertNotification':'没有定义警报通知',
+  'alerts.actions.manage_alert_notifications_popup.addButton':'创建新的警报通知',
+  'alerts.actions.manage_alert_notifications_popup.addHeader':'创建新的警报通知',
+  'alerts.actions.manage_alert_notifications_popup.removeButton':'删除警报通知',
+  'alerts.actions.manage_alert_notifications_popup.editButton':'编辑警报通知',
+  'alerts.actions.manage_alert_notifications_popup.editHeader':'编辑通知',
+  'alerts.actions.manage_alert_notifications_popup.duplicateButton':'重复警报通知',
+  'alerts.actions.manage_alert_notifications_popup.method':'方法',
+  'alerts.actions.manage_alert_notifications_popup.email':'发送邮件到',
+  'alerts.actions.manage_alert_notifications_popup.SMTPServer':'SMTP 服务器',
+  'alerts.actions.manage_alert_notifications_popup.SMTPPort':'SMTP 端口',
+  'alerts.actions.manage_alert_notifications_popup.SMTPUseAuthentication':'用户鉴权',
+  'alerts.actions.manage_alert_notifications_popup.SMTPUsername':'用户名',
+  'alerts.actions.manage_alert_notifications_popup.SMTPPassword':'密码',
+  'alerts.actions.manage_alert_notifications_popup.retypeSMTPPassword':'密码确认',
+  'alerts.actions.manage_alert_notifications_popup.SMTPSTARTTLS':'开启 TLS',
+  'alerts.actions.manage_alert_notifications_popup.emailFrom':'电子邮件来自',
+  'alerts.actions.manage_alert_notifications_popup.version':'版本',
   'alerts.actions.manage_alert_notifications_popup.OIDs':'OID',
-  'alerts.actions.manage_alert_notifications_popup.community':'Community',
+  'alerts.actions.manage_alert_notifications_popup.community':'社区',
   'alerts.actions.manage_alert_notifications_popup.host':'Hosts',
-  'alerts.actions.manage_alert_notifications_popup.port':'Port',
-  'alerts.actions.manage_alert_notifications_popup.global':'Global',
-  'alerts.actions.manage_alert_notifications_popup.noDescription':'<i>No description</i>',
-  'alerts.actions.manage_alert_notifications_popup.noGroup':'<i>None selected</i>',
-  'alerts.actions.manage_alert_notifications_popup.severityFilter':'Severity',
-  'alerts.actions.manage_alert_notifications_popup.clearAll':'Clear All',
-  'alerts.actions.manage_alert_notifications_popup.selectAll':'Select All',
-  'alerts.actions.manage_alert_notifications_popup.confirmDeleteHeader':'Confirm Delete',
-  'alerts.actions.manage_alert_notifications_popup.confirmDeleteBody':'Are you sure you want to delete {0} notification?',
-  'alerts.actions.manage_alert_notifications_popup.error.name.empty': 'Notification name is required',
-  'alerts.actions.manage_alert_notifications_popup.error.name.existed': 'Notification name already exists',
+  'alerts.actions.manage_alert_notifications_popup.port':'端口',
+  'alerts.actions.manage_alert_notifications_popup.global':'全球的',
+  'alerts.actions.manage_alert_notifications_popup.noDescription':'<i>没有描述</i>',
+  'alerts.actions.manage_alert_notifications_popup.noGroup':'<i>无选择</i>',
+  'alerts.actions.manage_alert_notifications_popup.severityFilter':'严重程度',
+  'alerts.actions.manage_alert_notifications_popup.clearAll':'清除所有',
+  'alerts.actions.manage_alert_notifications_popup.selectAll':'选择全部',
+  'alerts.actions.manage_alert_notifications_popup.confirmDeleteHeader':'确认删除',
+  'alerts.actions.manage_alert_notifications_popup.confirmDeleteBody':'确实要删除{0}通知吗？?',
+  'alerts.actions.manage_alert_notifications_popup.error.name.empty': '需要通知名称',
+  'alerts.actions.manage_alert_notifications_popup.error.name.existed': '通知名称已经存在',
 
-  'hosts.host.add':'Add New Hosts',
-  'hosts.table.noHosts':'No hosts to display',
+  'hosts.host.add':'添加新主机',
+  'hosts.table.noHosts':'没有主机显示',
 
-  'hosts.filters.filteredHostsInfo': '{0} of {1} hosts showing',
+  'hosts.filters.filteredHostsInfo': '{0}的{1}主机，显示',
 
-  'hosts.filters.selectedHostInfo': 'host selected',
-  'hosts.filters.selectedHostsInfo': 'hosts selected',
+  'hosts.filters.selectedHostInfo': '选中的主机',
+  'hosts.filters.selectedHostsInfo': '主机选择',
 
-  'hosts.filters.clearSelection': 'clear selection',
+  'hosts.filters.clearSelection': '清晰选择',
 
-  'hosts.filters.filterComponents': 'Filter by <strong>Component</strong>',
+  'hosts.filters.filterComponents': '通过<strong>组件</strong>来筛选',
 
-  'hosts.table.restartComponents.withNames':'Restart {0}',
-  'hosts.table.restartComponents.withoutNames':'{0} components should be restarted',
+  'hosts.table.restartComponents.withNames':'重启 {0}',
+  'hosts.table.restartComponents.withoutNames':'{0}应该重新启动组件',
 
-  'hosts.table.componentsInPassiveState.withNames':'{0} in Maintenance Mode',
-  'hosts.table.componentsInPassiveState.withoutNames':'{0} components in Maintenance Mode',
+  'hosts.table.componentsInPassiveState.withNames':'{0} 在维护模式下',
+  'hosts.table.componentsInPassiveState.withoutNames':'{0} 维护模式中的组件',
 
-  'hosts.table.menu.l1.selectedHosts':'Selected Hosts',
-  'hosts.table.menu.l1.filteredHosts':'Filtered Hosts',
-  'hosts.table.menu.l1.allHosts':'All Hosts',
-  'hosts.table.menu.l2.allComponents':'All Components',
-  'hosts.table.menu.l2.restartAllComponents':'Restart All Components',
-  'hosts.table.menu.l2.reinstallFailedComponents':'Reinstall Failed Components',
+  'hosts.table.menu.l1.selectedHosts':'选中的 Hosts',
+  'hosts.table.menu.l1.filteredHosts':'过滤后的 Hosts',
+  'hosts.table.menu.l1.allHosts':'所有的 Hosts',
+  'hosts.table.menu.l2.allComponents':'所有的组件',
+  'hosts.table.menu.l2.restartAllComponents':'重启所有的组件',
+  'hosts.table.menu.l2.reinstallFailedComponents':'重新安装失效部件',
 
-  'hosts.bulkOperation.confirmation.header':'Confirm Bulk Operation',
-  'hosts.bulkOperation.confirmation.hosts':'Are you sure you want to <strong>{0}</strong> on the following {1} hosts?',
-  'hosts.bulkOperation.confirmation.hostComponents':'Are you sure you want to <strong>{0} {1}</strong> on the following {2} hosts?',
-  'hosts.bulkOperation.passiveState.nothingToDo.body':'All hosts that you selected are already in Maintenance Mode.',
-  'hosts.bulkOperation.warningInfo.body':'Components on these hosts are stopped so decommission will be skipped.',
-  'hosts.bulkOperation.host_components.passiveState.nothingToDo.body':'All host components that you selected are already in Maintenance Mode',
-  'hosts.bulkOperation.confirmation.add.component':'You are going to <strong>{0} {1}</strong> on the following {2} hosts.',
-  'hosts.bulkOperation.confirmation.add.component.skip':'The following hosts are skipped as they already have {0} installed.',
-  'hosts.bulkOperation.confirmation.add.component.nothingToDo.body': 'All the selected hosts have {0} installed already.',
-  'hosts.bulkOperation.deleteHosts.dryRun.header':'Confirm Bulk Delete Hosts',
-  'hosts.bulkOperation.deleteHosts.dryRun.message':'There are <strong>{0} host(s)</strong> that cannot be deleted (expand for reason):',
-  'hosts.bulkOperation.deleteHosts.dryRun.primary':'Delete The Other {0} Host(s)',
-  'hosts.bulkOperation.deleteHosts.confirmation.header':'Confirm Bulk Delete Hosts',
-  'hosts.bulkOperation.deleteHosts.confirmation.body': 'Are you sure you want to delete host(s):',
-  'hosts.bulkOperation.deleteHosts.confirmation.body.msg1': 'By removing above hosts, Ambari will ignore future communication from them. Software packages will not be removed from the hosts. The components on the hosts should not be restarted. If you wish to readd the hosts to the cluster, be sure to clean them.',
-  'hosts.bulkOperation.deleteHosts.confirmation.body.msg2': '<b>WARNING!</b> If the agent is still heartbeating, the hosts will still exist in the database.',
-  'hosts.bulkOperation.deleteHosts.confirmation.body.msg3': 'To completely delete the hosts, first stop ambari-agent on them.',
-  'hosts.bulkOperation.deleteHosts.confirmation.body.msg4': 'If the hosts were hosting a Zookeeper Server, the Zookeeper Service should be restarted. Go to the <i>Services</i> page.',
-  'hosts.bulkOperation.deleteHosts.result.header':'Delete Hosts',
-  'hosts.bulkOperation.deleteHosts.result.body': 'The following hosts were deleted successfully:',
+  'hosts.bulkOperation.confirmation.header':'确认批量操作',
+  'hosts.bulkOperation.confirmation.hosts':'您确定要在下列{1}主机上<strong>{0}</strong>吗？',
+  'hosts.bulkOperation.confirmation.hostComponents':'您确定要在下列{2}主机上<strong>{0}{1}</strong>吗？',
+  'hosts.bulkOperation.passiveState.nothingToDo.body':'您选择的所有主机都已经处于维护模式.',
+  'hosts.bulkOperation.warningInfo.body':'这些主机上的组件停止，因此将跳过卸任主机上的这些组件。',
+  'hosts.bulkOperation.host_components.passiveState.nothingToDo.body':'您选择的所有主机组件都已经处于维护模式',
+  'hosts.bulkOperation.confirmation.add.component':'你即将 <strong>{0} {1}</strong> 在下面的这些主机： {2} 。',
+  'hosts.bulkOperation.confirmation.add.component.skip':'跳过下列主机，因为它们已经安装{0}.',
+  'hosts.bulkOperation.confirmation.add.component.nothingToDo.body': '所有选定的主机都已经安装{0}。',
+  'hosts.bulkOperation.deleteHosts.dryRun.header':'确认批量删除主机',
+  'hosts.bulkOperation.deleteHosts.dryRun.message':'有不能删除的strong>{0}主机</strong>（由于原因而扩展）:',
+  'hosts.bulkOperation.deleteHosts.dryRun.primary':'删除其他 {0} 主机',
+  'hosts.bulkOperation.deleteHosts.confirmation.header':'确认批量删除主机',
+  'hosts.bulkOperation.deleteHosts.confirmation.body': '您确定要删除主机吗:',
+  'hosts.bulkOperation.deleteHosts.confirmation.body.msg1': '通过删除上述主机，Ambari将忽略它们未来的通信。软件包不会从主机中删除。不应重新启动主机上的组件。如果希望读取集群中的主机，请确保清除它们。',
+  'hosts.bulkOperation.deleteHosts.confirmation.body.msg2': '<b>警告!</b> 如果代理仍有心跳，则主机仍然存在于数据库中.',
+  'hosts.bulkOperation.deleteHosts.confirmation.body.msg3': '要完全删除主机，首先要停止主机上的ambari代理。',
+  'hosts.bulkOperation.deleteHosts.confirmation.body.msg4': '如果主机托管的是Zookeeper服务器，则应重新启动Zookeeper服务。转到<i>Services</i>页面.',
+  'hosts.bulkOperation.deleteHosts.result.header':'删除节点',
+  'hosts.bulkOperation.deleteHosts.result.body': '下列主机删除成功:',
 
-  'hosts.selectHostsDialog.title': 'Select Configuration Group Hosts',
-  'hosts.selectHostsDialog.message': 'Select hosts that should belong to this {0} Configuration Group. All hosts belonging to this group will have the same set of configurations.',
+  'hosts.selectHostsDialog.title': '选择配置组主机',
+  'hosts.selectHostsDialog.message': '选择应该属于{0}配置组的主机。属于此组的所有主机将具有相同的配置集.',
   'hosts.selectHostsDialog.filter.placeHolder': '过滤...',
-  'hosts.selectHostsDialog.selectedHostsLink': '{0} out of {1} hosts selected',
-  'hosts.selectHostsDialog.message.warning': 'At least one host needs to be selected.',
+  'hosts.selectHostsDialog.selectedHostsLink': '{0}选自{1}主机',
+  'hosts.selectHostsDialog.message.warning': '需要选择至少一个主机.',
 
-  'hosts.host.serviceNotAvailable': 'Service not available on this host',
+  'hosts.host.serviceNotAvailable': '此主机上不可用的服务',
 
-  'hosts.host.menu.logs': 'Logs',
+  'hosts.host.menu.logs': '日志',
 
   'hosts.host.menu.stackVersions': '版本',
-  'hosts.host.stackVersions.table.allVersions': 'All Versions',
-  'hosts.host.stackVersions.table.allNames': 'All Names',
-  'hosts.host.stackVersions.table.noVersions': 'No versions',
-  'hosts.host.stackVersions.table.filteredInfo': '{0} of {1} versions showing',
+  'hosts.host.stackVersions.table.allVersions': '所有版本',
+  'hosts.host.stackVersions.table.allNames': '所有名称',
+  'hosts.host.stackVersions.table.noVersions': '没有版本',
+  'hosts.host.stackVersions.table.filteredInfo': '{1}的{0}版本显示',
   'hosts.host.stackVersions.status.init': '已卸载',
   'hosts.host.stackVersions.status.installed': '已安装',
   'hosts.host.stackVersions.status.install_failed': '安装失败',
   'hosts.host.stackVersions.status.installing': '正在安装',
-  'hosts.host.stackVersions.status.current': 'Current',
-  'hosts.host.stackVersions.status.out_of_sync': 'Out of Sync',
-  'hosts.host.stackVersions.status.upgrading': 'Upgrading',
-  'hosts.host.stackVersions.status.upgrade_failed': 'Upgrade Failed',
-  'hosts.host.stackVersions.outOfSync.tooltip': 'This version is Out of Sync on this host. Out of Sync can occur ' +
-    'the components on a host change after installing a version not in use. ' +
-    'Click Install to have Ambari install the packages for this version to get this host in sync.',
-  'hosts.host.stackVersions.install.confirmation': 'You are about to install version <b>{0}</b> on this host.',
+  'hosts.host.stackVersions.status.current': '目前的',
+  'hosts.host.stackVersions.status.out_of_sync': '不同步',
+  'hosts.host.stackVersions.status.upgrading': '升级改造',
+  'hosts.host.stackVersions.status.upgrade_failed': '升级失败',
+  'hosts.host.stackVersions.outOfSync.tooltip': '这个版本在这个主机上不同步。可能出现不同步' +
+    '安装未使用的版本后，主机上的组件会发生变化。 ' +
+    '单击Install以让Ambari安装此版本的包，以同步此主机.',
+  'hosts.host.stackVersions.install.confirmation': '您即将在这个主机上安装版本<b>{0}</b>。',
 
-  'hosts.host.metrics.dataUnavailable':'Data Unavailable',
+  'hosts.host.metrics.dataUnavailable':'数据不可用',
   'hosts.host.metrics.cpu':'CPU 使用',
-  'hosts.host.metrics.cpu.displayNames.cpu_wio':'CPU I/O Idle',
-  'hosts.host.metrics.cpu.displayNames.cpu_idle':'CPU Idle',
-  'hosts.host.metrics.cpu.displayNames.cpu_nice':'CPU Nice',
-  'hosts.host.metrics.cpu.displayNames.cpu_aidle':'CPU Boot Idle',
-  'hosts.host.metrics.cpu.displayNames.cpu_system':'CPU System',
-  'hosts.host.metrics.cpu.displayNames.cpu_user':'CPU User',
+  'hosts.host.metrics.cpu.displayNames.cpu_wio':'CPU I/O 空闲的',
+  'hosts.host.metrics.cpu.displayNames.cpu_idle':'CPU 空闲的',
+  'hosts.host.metrics.cpu.displayNames.cpu_nice':'CPU 状态很好',
+  'hosts.host.metrics.cpu.displayNames.cpu_aidle':'CPU Boot 状态很好',
+  'hosts.host.metrics.cpu.displayNames.cpu_system':'CPU 系统',
+  'hosts.host.metrics.cpu.displayNames.cpu_user':'CPU 用户',
   'hosts.host.metrics.disk':'磁盘使用',
-  'hosts.host.metrics.disk.displayNames.disk_total':'Total',
-  'hosts.host.metrics.disk.displayNames.disk_free':'Available',
-  'hosts.host.metrics.load':'Load',
-  'hosts.host.metrics.load.displayNames.load_fifteen':'15 Minute Load',
-  'hosts.host.metrics.load.displayNames.load_one':'1 Minute Load',
-  'hosts.host.metrics.load.displayNames.load_five':'5 Minute Load',
+  'hosts.host.metrics.disk.displayNames.disk_total':'全部',
+  'hosts.host.metrics.disk.displayNames.disk_free':'可用',
+  'hosts.host.metrics.load':'加载',
+  'hosts.host.metrics.load.displayNames.load_fifteen':'15 分钟加载',
+  'hosts.host.metrics.load.displayNames.load_one':'1 分钟加载',
+  'hosts.host.metrics.load.displayNames.load_five':'5 分钟加载',
   'hosts.host.metrics.memory':'内存使用',
-  'hosts.host.metrics.memory.displayNames.mem_shared':'Shared',
-  'hosts.host.metrics.memory.displayNames.swap_free':'Swap',
+  'hosts.host.metrics.memory.displayNames.mem_shared':'分享的',
+  'hosts.host.metrics.memory.displayNames.swap_free':'交换',
   'hosts.host.metrics.memory.displayNames.mem_buffers':'Buffers',
-  'hosts.host.metrics.memory.displayNames.mem_free':'Free',
-  'hosts.host.metrics.memory.displayNames.mem_cached':'Cached',
+  'hosts.host.metrics.memory.displayNames.mem_free':'空闲的',
+  'hosts.host.metrics.memory.displayNames.mem_cached':'缓存的',
   'hosts.host.metrics.network':'网络使用',
   'hosts.host.metrics.network.displayNames.pkts_out':'Packets Out',
   'hosts.host.metrics.network.displayNames.bytes_in':'Bytes In',
   'hosts.host.metrics.network.displayNames.bytes_out':'Bytes Out',
   'hosts.host.metrics.network.displayNames.pkts_in':'Packets In',
-  'hosts.host.metrics.processes':'Processes',
-  'hosts.host.metrics.processes.displayNames.proc_total':'Total Processes',
-  'hosts.host.metrics.processes.displayNames.proc_run':'Processes Run',
+  'hosts.host.metrics.processes':'进程',
+  'hosts.host.metrics.processes.displayNames.proc_total':'所有进程',
+  'hosts.host.metrics.processes.displayNames.proc_run':'进程运行',
 
-  'hosts.host.summary.header':'Summary',
-  'hosts.host.summary.hostname':'Hostname',
-  'hosts.host.summary.agentHeartbeat':'Heartbeat',
-  'hosts.host.summary.agentHasJce':'Unlimited JCE installed',
-  'hosts.host.summary.hostMetrics':'Host Metrics',
-  'hosts.host.summary.hostLogMetrics':'Host Log Metrics',
-  'hosts.host.summary.addComponent':'Add Component',
-  'hosts.host.summary.currentVersion':'Current Version',
+  'hosts.host.summary.header':'总结',
+  'hosts.host.summary.hostname':'主机名',
+  'hosts.host.summary.agentHeartbeat':'心跳',
+  'hosts.host.summary.agentHasJce':'无限制的JCE安装',
+  'hosts.host.summary.hostMetrics':'主机度量',
+  'hosts.host.summary.hostLogMetrics':'主机日志度量',
+  'hosts.host.summary.addComponent':'添加组件',
+  'hosts.host.summary.currentVersion':'现行版本',
 
-  'hosts.host.details.hostActions':'Host Actions',
-  'hosts.host.details.needToRestart':'Host needs {0} {1} restarted',
+  'hosts.host.details.hostActions':'主机动作',
+  'hosts.host.details.needToRestart':'主机需要{0}{1}重新启动',
   'hosts.host.details.needToRestart.button':'重启',
-  'hosts.host.details.deleteHost':'Delete Host',
-  'hosts.host.details.startAllComponents':'Start All Components',
-  'hosts.host.details.stopAllComponents':'Stop All Components',
-  'hosts.host.details.restartAllComponents':'Restart All Components',
-  'hosts.host.details.deleteHosts':'Delete Hosts',
+  'hosts.host.details.deleteHost':'删除主机',
+  'hosts.host.details.startAllComponents':'启动所有组件',
+  'hosts.host.details.stopAllComponents':'停止所有组件',
+  'hosts.host.details.restartAllComponents':'重启所有组件',
+  'hosts.host.details.deleteHosts':'删除主机',
   'hosts.host.details.refreshConfigs':'刷新设置',
-  'hosts.host.details.for.postfix':'{0} for host',
-  'hosts.host.details.setRackId':'Set Rack',
-  'hosts.host.details.recoverHost': 'Recover Host',
-  'host.host.details.installClients': 'Install clients',
-  'host.host.details.reinstallClients': 'Reinstall clients',
-  'host.host.details.downloadAllClients': 'All Clients On Host',
+  'hosts.host.details.for.postfix':'主机的{0}',
+  'hosts.host.details.setRackId':'机架',
+  'hosts.host.details.recoverHost': '恢复宿主',
+  'host.host.details.installClients': '安装客户端',
+  'host.host.details.reinstallClients': '重新安装客户端',
+  'host.host.details.downloadAllClients': '主机上的所有客户端',
 
-  'host.host.componentFilter.master':'Master Components',
-  'host.host.componentFilter.slave':'Slave Components',
-  'host.host.componentFilter.client':'Client Components',
-  'hosts.host.deleteComponent.popup.msg1':'Are you sure you want to delete {0}?',
-  'hosts.host.deleteComponent.popup.deleteJournalNodeMsg': 'You are about to open <i>Manage Journal Node Wizard</i>. Are you sure?',
-  'hosts.host.deleteComponent.popup.warning':'<b>WARNING!</b> Delete the last <i>{0}</i> component in the cluster?</br>Deleting the last component in the cluster could result in permanent loss of service data.',
-  'hosts.host.deleteComponent.popup.confirm':'Confirm Delete',
-  'hosts.host.installComponent.popup.confirm':'Confirm Install',
-  'hosts.host.installComponent.msg':'Are you sure you want to install {0}?',
-  'hosts.host.addComponent.msg':'Are you sure you want to add {0}?',
-  'hosts.host.addComponent.deleteHostWithZooKeeper':'Deleting host with ZooKeeper Server may reconfigure such properties:<ul><li>ha.zookeeper.quorum</li><li>hbase.zookeeper.quorum</li><li>templeton.zookeeper.hosts</li><li>yarn.resourcemanager.zk-address</li><li>hive.zookeeper.quorum</li><li>hive.cluster.delegation.token.store.zookeeper.connectString</li></ul>',
-  'host.host.addComponent.popup.dependedComponents.body': '{0} requires {1} to be installed along with it on the same host. Please add them first and then try adding {0}',
-  'host.host.addComponent.popup.dependedComponents.header': 'Component dependencies',
-  'host.host.addComponent.popup.clients.dependedComponents.body': '{0} require {1} to be installed along with them on the same host. Please add them first',
-  'hosts.host.zooKeeper.configs.save.note': 'This configuration is created by ambari while installing/deleting zookeeper component on a host',
-  'hosts.host.addComponent.securityNote':'You are running your cluster in secure mode. You must set up the keytab for {0} on {1} before you proceed. Otherwise, the component will not be able to start properly.',
-  'hosts.host.addComponent.popup.confirm':'Confirm Add',
-  'hosts.host.manualKerberosWarning': '<strong>Because Kerberos has been manually installed on the cluster, you will have to create/distribute principals and keytabs when this operation is finished.</strong>',
-  'hosts.host.deleteComponent.popup.deleteNimbus':'Deleting <i>Storm Nimbus</i> will reconfigure <b>nimbus.seeds</b>, <b>topology.min.replication.count</b>, <b>topology.max.replication.wait.time.sec</b> properties if they are defined.',
-  'hosts.host.storm.configs.save.note': 'This configuration is created by ambari while installing/deleting storm component on a host',
-  'hosts.host.datanode.decommission':'Decommission DataNode',
-  'hosts.host.datanode.recommission':'Recommission DataNode',
-  'hosts.host.nodemanager.decommission':'Decommission NodeManager',
-  'hosts.host.nodemanager.recommission':'Recommission NodeManager',
-  'hosts.host.tasktracker.decommission':'Decommission TaskTracker',
-  'hosts.host.tasktracker.recommission':'Recommission TaskTracker',
-  'hosts.host.tasktracker.restart':'Restart TaskTracker',
-  'hosts.host.regionserver.decommission.batch1':'Decommission RegionServer - Turn drain mode on',
-  'hosts.host.regionserver.decommission.batch2':'Decommission RegionServer - Stop RegionServer',
-  'hosts.host.regionserver.decommission.batch3':'Decommission RegionServer - Turn drain mode off',
-  'hosts.host.hbase_regionserver.recommission':'Recommission RegionServer',
-  'hosts.host.hbase_regionserver.decommission':'Decommission RegionServer',
-  'hosts.host.hbase_regionserver.decommission.warning':'Last RegionServer can\'t be decommissioned',
-  'hosts.host.decommissioned':'Decommissioned',
-  'hosts.host.decommissioning':'Decommissioning',
-  'hosts.host.addComponent.JOURNALNODE': 'You are about to open <i>Manage Journal Node Wizard</i>. Are you sure?',
-  'hosts.host.deleteComponent.popup.deleteHiveMetastore':'Deleting <i>Hive Metastore</i> will reconfigure such properties:<ul><li>hive.metastore.uris</li><li>templeton.hive.properties</li></ul>',
-  'hosts.host.deleteComponent.popup.deleteWebHCatServer':'You are about to delete <i>WebHCat Server</i>. Are you sure?',
-  'hosts.host.configs.save.note': 'This configuration is created by ambari while installing/deleting {0} component on a host',
+  'host.host.componentFilter.master':'Master 组件',
+  'host.host.componentFilter.slave':'Slave 组件',
+  'host.host.componentFilter.client':'Client 组件',
+  'hosts.host.deleteComponent.popup.msg1':'你确定要删除{0}么?',
+  'hosts.host.deleteComponent.popup.deleteJournalNodeMsg': '您即将打开<i>管理日志节点向导</i>。你确定吗?',
+  'hosts.host.deleteComponent.popup.warning':'<b>警告！</b>删除集群中的最后一个<i>{0}</i>组件？</br>删除集群中的最后一个组件可能导致服务数据的永久丢失。',
+  'hosts.host.deleteComponent.popup.confirm':'确认删除',
+  'hosts.host.installComponent.popup.confirm':'确认安装',
+  'hosts.host.installComponent.msg':'你真的要安装{0}么?',
+  'hosts.host.addComponent.msg':'您确定要添加 {0}?',
+  'hosts.host.addComponent.deleteHostWithZooKeeper':'用ZooKeeper Server删除主机可以重新配置这样的属性：<ul><li>ha.zookeeper.quorum</li><li>hbase.zookeeper.quorum</li><li>templeton.zookeeper.hosts</li><li>yarn.resourcemanager.zk-address</li><li>hive.zookeeper.quorum</li><li>hive.cluster.delegation.token.store.zookeeper.connectString</li></ul>',
+  'host.host.addComponent.popup.dependedComponents.body': '{0}要求{1}与其一起安装在同一主机上。请先添加它们，然后尝试添加{0}',
+  'host.host.addComponent.popup.dependedComponents.header': '组件依赖性',
+  'host.host.addComponent.popup.clients.dependedComponents.body': '{0}要求{1}与它们一起安装在同一主机上。请先加上。',
+  'hosts.host.zooKeeper.configs.save.note': '此配置由ambari创建，同时在主机上安装/删除zookeeper组件',
+  
+  'hosts.host.addComponent.securityNote':'你的集群运行在安全模式下. 在你继续之前，你必须set up the keytab for {0} on {1}. 否则这部分将不会正常启动',
+  'hosts.host.addComponent.popup.confirm':'添加确认',
+  'hosts.host.manualKerberosWarning': '<strong>因为 Kerberos 已经被手动安装到此集群，当此操作结束的时候，你必须创建或分发规则和keytabs</strong>',
+  'hosts.host.deleteComponent.popup.deleteNimbus':'如果<b>nimbus.seeds</b>, <b>topology.min.replication.count</b>, <b>topology.max.replication.wait.time.sec</b>的属性已被定义，删除 <i>Storm Nimbus</i> 将会使其重新配置',
+  'hosts.host.storm.configs.save.note': '这项配置由ambari在一台主机安装/删除storm组建时创建',
+  'hosts.host.datanode.decommission':'终止使用数据节点',
+  'hosts.host.datanode.recommission':'启用数据节点',
+  'hosts.host.nodemanager.decommission':'终止使用节点管理器',
+  'hosts.host.nodemanager.recommission':'启用节点管理器',
+  'hosts.host.tasktracker.decommission':'终止使用任务跟踪器',
+  'hosts.host.tasktracker.recommission':'启用任务跟踪器',
+  'hosts.host.tasktracker.restart':'重启任务跟踪器',
+  'hosts.host.regionserver.decommission.batch1':'终止使用RegionServer-开启drain模式',
+  'hosts.host.regionserver.decommission.batch2':'终止使用RegionServer-关闭RegionServer',
+  'hosts.host.regionserver.decommission.batch3':'终止使用RegionServer-关闭drain模式',
+  'hosts.host.hbase_regionserver.recommission':'启用RegionServer',
+  'hosts.host.hbase_regionserver.decommission':'终止使用RegionServer',
+  'hosts.host.hbase_regionserver.decommission.warning':'无法终止上一个RegionServer',
+  'hosts.host.decommissioned':'终止使用',
+  'hosts.host.decommissioning':'正在终止使用',
+  'hosts.host.addComponent.JOURNALNODE': '你将要打开<i>Manage Journal Node Wizard</i>，你确定吗？',
+  'hosts.host.deleteComponent.popup.deleteHiveMetastore':'删除<i>Hive Metastore</i>将会重新配置下列文件：<ul><li>hive.metastore.uris</li><li>templeton.hive.properties</li></ul>',
+  'hosts.host.deleteComponent.popup.deleteWebHCatServer':'你将要删除<i>WebHCat Server</i>，你确定吗？',
+  'hosts.host.configs.save.note': '这项配置由ambari在一台主机安装/删除{0}部分时创建',
+
 
   'hosts.component.passive.implied.host.mode.tooltip':'Cannot Turn Off Maintenance Mode because Host is in Maintenance Mode',
   'hosts.component.passive.implied.service.mode.tooltip':'Cannot Turn Off Maintenance Mode because {0} is in Maintenance Mode',
